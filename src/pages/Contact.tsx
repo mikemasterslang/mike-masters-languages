@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Contact.css';
 
@@ -16,6 +17,11 @@ interface FormErrors {
   message?: string;
 }
 
+// EmailJS configuration — replace these with your actual IDs
+const EMAILJS_SERVICE_ID = 'service_XXXXXXX';
+const EMAILJS_TEMPLATE_ID = 'template_XXXXXXX';
+const EMAILJS_PUBLIC_KEY = 'XXXXXXXXXXXXXXX';
+
 export default function Contact() {
   useScrollAnimation();
 
@@ -29,6 +35,8 @@ export default function Contact() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState('');
 
   const validate = (): boolean => {
     const errs: FormErrors = {};
@@ -43,10 +51,31 @@ export default function Contact() {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (validate()) {
+    if (!validate()) return;
+
+    setSending(true);
+    setSendError('');
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          language: form.language,
+          level: form.level,
+          message: form.message,
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
       setSubmitted(true);
+    } catch {
+      setSendError('Something went wrong. Please try emailing michael.s.andrews@outlook.com directly.');
+    } finally {
+      setSending(false);
     }
   };
 
@@ -87,7 +116,7 @@ export default function Contact() {
                 </div>
                 <h3>Message Sent!</h3>
                 <p>Thanks for getting in touch. I'll reply as soon as I can — usually within 24 hours.</p>
-                <button className="btn btn-primary" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', language: '', level: '', message: '' }); }}>
+                <button type="button" className="btn btn-primary" onClick={() => { setSubmitted(false); setSendError(''); setForm({ name: '', email: '', language: '', level: '', message: '' }); }}>
                   Send Another Message
                 </button>
               </div>
@@ -169,9 +198,10 @@ export default function Contact() {
                   {errors.message && <span className="field-error">{errors.message}</span>}
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-lg submit-btn">
-                  Send Message
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                {sendError && <p className="send-error">{sendError}</p>}
+                <button type="submit" className="btn btn-primary btn-lg submit-btn" disabled={sending}>
+                  {sending ? 'Sending...' : 'Send Message'}
+                  {!sending && <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>}
                 </button>
               </form>
             )}

@@ -4,51 +4,57 @@
 
 :root,
 [data-theme='light'] {
-  --primary: #6C63FF;
-  --primary-hover: #5a52e0;
-  --primary-light: rgba(108, 99, 255, 0.1);
-  --secondary: #00C9A7;
-  --secondary-hover: #00b396;
-  --accent: #FF6B6B;
-  --accent-hover: #e85d5d;
-  --background: #F4F5F9;
+  --primary: #035E7B;
+  --primary-hover: #024d66;
+  --primary-light: rgba(3, 94, 123, 0.08);
+  --secondary: #33AB99;
+  --secondary-hover: #2a9585;
+  --accent: #BAA7FF;
+  --accent-hover: #a68fff;
+  --gold: #FFEE92;
+  --background: #F6F7FB;
   --surface: #FFFFFF;
-  --surface-hover: #f0f1f5;
-  --text: #1A1A2E;
-  --text-muted: #64748b;
-  --border: #e2e8f0;
-  --shadow: rgba(0, 0, 0, 0.08);
-  --shadow-lg: rgba(0, 0, 0, 0.12);
-  --gradient-hero: linear-gradient(135deg, #6C63FF 0%, #00C9A7 100%);
-  --gradient-text: linear-gradient(135deg, #6C63FF 0%, #00C9A7 100%);
-  --overlay: rgba(26, 26, 46, 0.5);
-  --nav-bg: rgba(244, 245, 249, 0.85);
-  --code-bg: #ecedf3;
-  --bg-gradient: linear-gradient(160deg, #F4F5F9 0%, #EDE9FE 30%, #F4F5F9 50%, #D5F5F0 80%, #F4F5F9 100%);
+  --surface-hover: #f0f2f6;
+  --card-bg: #FFF8D6;
+  --text: #003C4D;
+  --text-muted: #527a87;
+  --border: #dce4e8;
+  --shadow: rgba(0, 60, 77, 0.06);
+  --shadow-lg: rgba(0, 60, 77, 0.12);
+  --gradient-hero: linear-gradient(135deg, #035E7B 0%, #33AB99 100%);
+  --gradient-text: linear-gradient(135deg, #035E7B 0%, #33AB99 100%);
+  --overlay: rgba(0, 60, 77, 0.5);
+  --nav-bg: rgba(246, 247, 251, 0.85);
+  --code-bg: #eceef4;
+  --bg-gradient: linear-gradient(160deg, #F6F7FB 0%, #e8f0ee 30%, #F6F7FB 50%, #ede8fc 80%, #F6F7FB 100%);
+  --star: #e8b100;
 }
 
 [data-theme='dark'] {
-  --primary: #8B8BFF;
-  --primary-hover: #a0a0ff;
-  --primary-light: rgba(139, 139, 255, 0.12);
-  --secondary: #00D9B5;
-  --secondary-hover: #00edc6;
-  --accent: #06B6D4;
-  --accent-hover: #08c8e8;
-  --background: #0F1729;
-  --surface: #1A2332;
-  --surface-hover: #222f42;
-  --text: #F0F4F8;
-  --text-muted: #94A3B8;
-  --border: #2D3A4F;
+  --primary: #33AB99;
+  --primary-hover: #3fc4af;
+  --primary-light: rgba(51, 171, 153, 0.12);
+  --secondary: #BAA7FF;
+  --secondary-hover: #cdbdff;
+  --accent: #FFEE92;
+  --accent-hover: #fff4b3;
+  --gold: #FFEE92;
+  --background: #003C4D;
+  --surface: #00485c;
+  --surface-hover: #005269;
+  --card-bg: #00485c;
+  --text: #F0F6F8;
+  --text-muted: #8fb8c4;
+  --border: #0a6178;
   --shadow: rgba(0, 0, 0, 0.3);
   --shadow-lg: rgba(0, 0, 0, 0.5);
-  --gradient-hero: linear-gradient(135deg, #8B8BFF 0%, #00D9B5 100%);
-  --gradient-text: linear-gradient(135deg, #8B8BFF 0%, #00D9B5 100%);
-  --overlay: rgba(15, 23, 41, 0.7);
-  --nav-bg: rgba(26, 35, 50, 0.9);
-  --code-bg: #151f30;
-  --bg-gradient: linear-gradient(160deg, #0F1729 0%, #161d35 30%, #0F1729 50%, #0e1f2d 80%, #0F1729 100%);
+  --gradient-hero: linear-gradient(135deg, #33AB99 0%, #BAA7FF 100%);
+  --gradient-text: linear-gradient(135deg, #33AB99 0%, #BAA7FF 100%);
+  --overlay: rgba(0, 40, 52, 0.7);
+  --nav-bg: rgba(0, 72, 92, 0.9);
+  --code-bg: #003040;
+  --bg-gradient: linear-gradient(160deg, #003C4D 0%, #004a5f 30%, #003C4D 50%, #003350 80%, #003C4D 100%);
+  --star: #FFEE92;
 }
 
 /* ========================================
@@ -218,7 +224,7 @@ ul, ol {
    ======================================== */
 
 .card {
-  background: var(--surface);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 2rem;
@@ -284,15 +290,15 @@ ul, ol {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 50%, rgba(108, 99, 255, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 50%, rgba(0, 201, 167, 0.05) 0%, transparent 50%);
+    radial-gradient(ellipse at 30% 50%, rgba(3, 94, 123, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(51, 171, 153, 0.05) 0%, transparent 50%);
   z-index: 0;
 }
 
 [data-theme='dark'] .page-hero::before {
   background:
-    radial-gradient(ellipse at 30% 50%, rgba(139, 139, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 50%, rgba(0, 217, 181, 0.06) 0%, transparent 50%);
+    radial-gradient(ellipse at 30% 50%, rgba(51, 171, 153, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(186, 167, 255, 0.08) 0%, transparent 50%);
 }
 
 .page-hero-content {

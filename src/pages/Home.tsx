@@ -1,9 +1,62 @@
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Home.css';
 
+const reviews = [
+  {
+    text: "Michael is a very good tutor, he is very patient with me and I enjoy my sessions. I would definitely recommend him.",
+    author: "Kahrel",
+  },
+  {
+    text: "My son was at very low confidence levels for French GCSE. We had 4 weeks of sessions with Michael and although we are still waiting for results, his confidence having done the exams is much better. Michael was very patient, and very willing to help. Gave prep for the first session in order to ascertain my son's working level. I genuinely couldn't have asked for more and can't recommend Michael highly enough.",
+    author: "Reshma",
+  },
+  {
+    text: "He is brilliant. He teaches myself and my daughter at the same time. The lessons are well structured, informative and at the perfect pace.",
+    author: "Naomi",
+  },
+  {
+    text: "I took the Spanish course before travelling in Central America. The compact, concise format taught me all the basics and necessities that I needed to communicate effectively with the locals. It really enhanced my experiences while travelling!",
+    author: "Kieran",
+  },
+  {
+    text: "My sessions with Michael really accelerated my vocabulary, grammar and conversational skills as well as my confidence in Spanish. From the very first session, I felt extremely confident and excited due to his knowledge and demeanor. His interesting and insightful lessons included learning about culture as well as just the language which I thoroughly enjoyed. Michael's patience and ability to help my learning really made a huge difference and I could not recommend him enough!",
+    author: "Liv",
+  },
+  {
+    text: "Michael's Spanish course is outstanding! It's well-structured, easy to follow, and perfect for beginners. His teaching style is clear and engaging, making complex grammar concepts understandable. The diverse content, including interactive exercises and quizzes, kept me motivated. The flexibility of learning at my own pace was fantastic, and Michael's prompt feedback was invaluable. This course has significantly improved my language skills, and I highly recommend it to anyone looking to learn Spanish effectively. Muchas gracias, Michael!",
+    author: "Jamie",
+  },
+  {
+    text: "Michael is an excellent tutor. My daughter finds him easy to follow, the lessons well structured and led by the areas of learning that she identified. He is extremely knowledgeable and friendly and she is very happy to be learning Spanish with Michael.",
+    author: "Laura",
+  },
+  {
+    text: "The tutoring has been great. Works at my own pace which is much appreciated. Lessons are well structured and informative. Can't fault a thing.",
+    author: "Cador",
+  },
+];
+
 export default function Home() {
   useScrollAnimation();
+
+  const [currentReview, setCurrentReview] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const nextReview = useCallback(() => {
+    setCurrentReview((prev) => (prev + 1) % reviews.length);
+  }, []);
+
+  const prevReview = useCallback(() => {
+    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(nextReview, 6000);
+    return () => clearInterval(timer);
+  }, [isPaused, nextReview]);
 
   return (
     <main>
@@ -26,8 +79,8 @@ export default function Home() {
               Book a Session
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </Link>
-            <Link to="/challenges" className="btn btn-secondary btn-lg">
-              View Challenges
+            <Link to="/courses" className="btn btn-secondary btn-lg">
+              View Courses
             </Link>
           </div>
           <div className="hero-stats fade-in">
@@ -120,13 +173,13 @@ export default function Home() {
               Passionate About <span className="gradient-text">Languages</span>
             </h2>
             <p>
-              I studied Spanish and French at school and A-Levels, then expanded my language learning to Russian at the University of Nottingham, where I graduated with a degree in all three languages.
+              Having studied Spanish and French at school and A-levels, I decided to expand my language learning to Russian when I started at the University of Nottingham where I graduated with a degree in all three languages.
             </p>
             <p>
-              For the last five years, I've helped all of my GCSE and A-Level students achieve their target grades or better. I aim to keep lessons enjoyable — teaching students not only to pass exams but to fall in love with the languages they study.
+              Although my background in languages was mainly developed in education, I always found using my languages the most rewarding and enjoyable part of the process. My approach to teaching languages, which is represented in my courses and tutoring, is to help you develop confidence in your abilities so that you can make the most of any travel plans, relationships that are built along the way and foreign cultures!
             </p>
             <p>
-              My approach focuses on building confidence so you can make the most of travel plans, relationships, and foreign cultures. Whether you're a complete beginner or looking to refine your skills, I tailor every session to your goals.
+              Finally, I am proud that I can say I have helped all of my GCSE and A-level students reach their target grades or better for the last three years since I started tutoring. As well as maintaining this 100% record, I aim to keep lessons as enjoyable for the students as possible and not only teach them to pass their exams, but hopefully to fall in love with the languages they study too!
             </p>
             <Link to="/contact" className="btn btn-primary">
               Get in Touch
@@ -154,24 +207,18 @@ export default function Home() {
               <p>
                 Personalised lessons tailored to your specific needs, pace and goals. Flexible scheduling that fits your weekly routine.
               </p>
+              <div className="service-price">£49 <span>online</span> · £65 <span>in-person</span></div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               </div>
-              <h3>Small Group Sessions</h3>
+              <h3>5 Lesson Block Booking</h3>
               <p>
-                Learn alongside others in small, focused groups. Great for building conversational confidence and learning collaboratively.
+                Commit to your learning with a block of five 1-1 online sessions at a discounted rate.
               </p>
-            </div>
-            <div className="service-card card fade-in">
-              <div className="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              </div>
-              <h3>Travel Packs</h3>
-              <p>
-                Complete Spanish and French travel programmes designed to have you confident with locals in the target country in under 30 days.
-              </p>
+              <div className="service-price">£220 <span>for 5 lessons</span></div>
+              <div className="service-saving">Save £25</div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
@@ -179,8 +226,9 @@ export default function Home() {
               </div>
               <h3>Exam Preparation</h3>
               <p>
-                Targeted GCSE and A-Level preparation covering all four skills. Proven track record of students achieving their target grades.
+                Targeted GCSE and A-Level preparation covering all four skills. 100% target grade record.
               </p>
+              <div className="service-price">£49 <span>online</span> · £65 <span>in-person</span></div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
@@ -190,6 +238,7 @@ export default function Home() {
               <p>
                 An extension programme with additional content to supplement your course or serve as a confidence booster before a trip.
               </p>
+              <div className="service-price">£40</div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
@@ -199,12 +248,23 @@ export default function Home() {
               <p>
                 Dedicated sessions focused on speaking and listening skills. Build the confidence to hold real conversations in your target language.
               </p>
+              <div className="service-price">£40</div>
+            </div>
+            <div className="service-card card fade-in">
+              <div className="service-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3>Small Group Sessions</h3>
+              <p>
+                Learn alongside others in small, focused groups. Great for building conversational confidence and learning collaboratively.
+              </p>
+              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.5rem', fontSize: '0.85rem', padding: '0.4rem 1rem' }}>Enquire Now</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials Carousel */}
       <section className="section testimonials-section">
         <div className="container">
           <h2 className="section-title fade-in">
@@ -213,45 +273,47 @@ export default function Home() {
           <p className="section-subtitle fade-in">
             Don't just take my word for it — hear from people who've experienced the lessons first-hand.
           </p>
-          <div className="testimonials-grid">
-            <div className="testimonial-card card fade-in">
-              <div className="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <blockquote>
-                "He is brilliant. He teaches myself and my daughter at the same time. The lessons are well structured, informative and at the perfect pace."
-              </blockquote>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar">S</div>
-                <div>
-                  <strong>Sarah T.</strong>
-                  <span>Spanish Student</span>
+          <div
+            className="carousel fade-in"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <button type="button" className="carousel-btn carousel-prev" onClick={prevReview} aria-label="Previous review">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div className="carousel-track">
+              {reviews.map((review, i) => (
+                <div
+                  key={review.author}
+                  className={`carousel-slide${i === currentReview ? ' active' : ''}`}
+                  aria-hidden={i !== currentReview ? "true" : undefined}
+                >
+                  <div className="testimonial-card card">
+                    <div className="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>"{review.text}"</blockquote>
+                    <div className="testimonial-author">
+                      <div className="testimonial-avatar">{review.author[0]}</div>
+                      <div>
+                        <strong>{review.author}</strong>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-            <div className="testimonial-card card fade-in">
-              <div className="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <blockquote>
-                "Michael's teaching style makes even the trickiest grammar feel approachable. My son went from a grade 5 to a grade 8 at GCSE. Couldn't recommend more highly."
-              </blockquote>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar">J</div>
-                <div>
-                  <strong>James R.</strong>
-                  <span>Parent of GCSE Student</span>
-                </div>
-              </div>
-            </div>
-            <div className="testimonial-card card fade-in">
-              <div className="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <blockquote>
-                "The travel pack was exactly what I needed before my trip to Barcelona. In just a few weeks I felt confident enough to order food, ask for directions and have basic conversations."
-              </blockquote>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar">L</div>
-                <div>
-                  <strong>Laura M.</strong>
-                  <span>Travel Pack Student</span>
-                </div>
-              </div>
+            <button type="button" className="carousel-btn carousel-next" onClick={nextReview} aria-label="Next review">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div className="carousel-dots">
+              {reviews.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`carousel-dot${i === currentReview ? ' active' : ''}`}
+                  onClick={() => setCurrentReview(i)}
+                  aria-label={`Go to review ${i + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
