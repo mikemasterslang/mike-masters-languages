@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import FlagIcon from '../components/FlagIcon';
 import './Home.css';
 
 const reviews = [
@@ -113,7 +114,7 @@ export default function Home() {
           </p>
           <div className="lang-grid">
             <div className="lang-card fade-in">
-              <div className="lang-flag">🇪🇸</div>
+              <div className="lang-flag"><FlagIcon country="spain" size={72} /></div>
               <h3>Spanish</h3>
               <p>
                 From conversational fluency to exam preparation, master one of the world's most spoken languages.
@@ -122,7 +123,7 @@ export default function Home() {
               <Link to="/book-online" className="btn btn-secondary">Learn More</Link>
             </div>
             <div className="lang-card fade-in">
-              <div className="lang-flag">🇫🇷</div>
+              <div className="lang-flag"><FlagIcon country="france" size={72} /></div>
               <h3>French</h3>
               <p>
                 Build confidence in reading, writing, listening and speaking. Perfect for GCSE, A-Level or adult learners
@@ -131,7 +132,7 @@ export default function Home() {
               <Link to="/book-online" className="btn btn-secondary">Learn More</Link>
             </div>
             <div className="lang-card fade-in">
-              <div className="lang-flag">🇷🇺</div>
+              <div className="lang-flag"><FlagIcon country="russia" size={72} /></div>
               <h3>Russian</h3>
               <p>
                 Take on a rewarding challenge with Russian. From Cyrillic basics to confident conversation,

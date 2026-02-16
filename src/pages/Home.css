@@ -131,8 +131,8 @@
 }
 
 .lang-flag {
-  font-size: 3rem;
   margin-bottom: 1.25rem;
+  line-height: 0;
 }
 
 .lang-card h3 {

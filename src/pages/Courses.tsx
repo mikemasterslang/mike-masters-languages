@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import FlagIcon from '../components/FlagIcon';
 import './Courses.css';
 
 export default function Courses() {
@@ -132,7 +133,7 @@ export default function Courses() {
             </div>
             <div className="course-feature-visual fade-in-right">
               <div className="course-visual-card">
-                <span className="course-flag">🇪🇸</span>
+                <span className="course-flag"><FlagIcon country="spain" size={80} /></span>
                 <h3>Spanish before Spain</h3>
                 <p>Confidence-First Method</p>
                 <ul className="course-highlights-list">
