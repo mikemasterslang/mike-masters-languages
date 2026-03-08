@@ -36,14 +36,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
   background: var(--gradient-hero);
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
 }
 
 .logo-text {

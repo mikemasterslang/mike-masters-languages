@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <span className="logo-icon">MA</span>
-              <span className="logo-text">Language Tutoring</span>
+              <span className="logo-icon">MM</span>
+              <span className="logo-text">Languages</span>
             </Link>
             <p className="footer-desc">
               Explore the world through language. Expert tutoring in Spanish, French &amp; Russian for all levels.
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} MA Language Tutoring. All rights reserved.</p>
+          <p>&copy; {currentYear} Mike Masters Languages. All rights reserved.</p>
         </div>
       </div>
     </footer>

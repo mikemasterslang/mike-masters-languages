@@ -36,9 +36,9 @@ export default function Navbar() {
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main navigation">
       <div className="navbar-inner container">
-        <Link to="/" className="navbar-logo" aria-label="MA Language Tutoring home">
-          <span className="logo-icon">MA</span>
-          <span className="logo-text">Language Tutoring</span>
+        <Link to="/" className="navbar-logo" aria-label="Mike Masters Languages home">
+          <span className="logo-icon">MM</span>
+          <span className="logo-text">Languages</span>
         </Link>
 
         <div className="navbar-right">
