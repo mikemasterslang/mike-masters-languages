@@ -1,3 +1,5 @@
+import type { JSX } from 'react';
+
 interface FlagIconProps {
   country: 'spain' | 'france' | 'russia';
   size?: number;
@@ -23,14 +25,6 @@ export default function FlagIcon({ country, size = 64, className = '' }: FlagIco
           <rect x="0" y="0" width="120" height="30" fill="#c60b1e" />
           <rect x="0" y="30" width="120" height="60" fill="#ffc400" />
           <rect x="0" y="90" width="120" height="30" fill="#c60b1e" />
-          {/* Coat of arms hint */}
-          <g transform="translate(46, 42)">
-            <rect x="0" y="0" width="28" height="36" rx="3" fill="#ad1519" opacity="0.8" />
-            <rect x="3" y="3" width="10" height="15" rx="1" fill="#ffc400" opacity="0.7" />
-            <rect x="15" y="3" width="10" height="15" rx="1" fill="#fff" opacity="0.5" />
-            <rect x="3" y="20" width="10" height="13" rx="1" fill="#fff" opacity="0.5" />
-            <rect x="15" y="20" width="10" height="13" rx="1" fill="#ffc400" opacity="0.7" />
-          </g>
         </g>
         <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
       </svg>
