@@ -8,9 +8,16 @@
   align-items: center;
 }
 
+.spanish-hero .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .spanish-flag-inline {
-  font-size: 1.1em;
-  margin-right: 0.15rem;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
 }
 
 .spanish-hero-actions {
@@ -223,6 +230,7 @@
   padding-bottom: 1.25rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--border);
+  min-height: 52px;
 }
 
 .compare-header h3 {
@@ -230,7 +238,12 @@
 }
 
 .compare-flag {
-  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
 }
 
 .compare-icon {
@@ -239,6 +252,7 @@
   justify-content: center;
   width: 36px;
   height: 36px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--primary-light);
   color: var(--primary);

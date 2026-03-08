@@ -25,7 +25,7 @@ export default function Footer() {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/spanish">Spanish</Link></li>
-              <li><Link to="/courses">Courses</Link></li>
+
               <li><Link to="/book-online">Book Online</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>

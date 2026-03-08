@@ -27,7 +27,6 @@ export default function Navbar() {
 
   const navLinks = [
     { to: '/', label: 'Home' },
-    { to: '/courses', label: 'Courses' },
     { to: '/spanish', label: 'Spanish' },
     { to: '/book-online', label: 'Book Online' },
     { to: '/contact', label: 'Contact' },

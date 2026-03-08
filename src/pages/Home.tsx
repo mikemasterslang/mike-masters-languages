@@ -65,7 +65,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-bg" aria-hidden="true" />
         <div className="container hero-content">
-          <div className="hero-badge fade-in">Michael Andrews Language Tutoring</div>
+          <div className="hero-badge fade-in">Mike Masters Languages</div>
           <h1 className="hero-title fade-in">
             Explore the World<br />
             Through <span className="gradient-text">Language</span>
@@ -80,7 +80,7 @@ export default function Home() {
               Book a Session
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </Link>
-            <Link to="/courses" className="btn btn-secondary btn-lg">
+            <Link to="/spanish" className="btn btn-secondary btn-lg">
               View Courses
             </Link>
           </div>
@@ -208,7 +208,6 @@ export default function Home() {
               <p>
                 Personalised lessons tailored to your specific needs, pace and goals. Flexible scheduling that fits your weekly routine.
               </p>
-              <div className="service-price">£49 <span>online</span> · £65 <span>in-person</span></div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
@@ -218,8 +217,6 @@ export default function Home() {
               <p>
                 Commit to your learning with a block of five 1-1 online sessions at a discounted rate.
               </p>
-              <div className="service-price">£220 <span>for 5 lessons</span></div>
-              <div className="service-saving">Save £25</div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
@@ -229,7 +226,6 @@ export default function Home() {
               <p>
                 Targeted GCSE and A-Level preparation covering all four skills. 100% target grade record.
               </p>
-              <div className="service-price">£49 <span>online</span> · £65 <span>in-person</span></div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
@@ -239,7 +235,6 @@ export default function Home() {
               <p>
                 An extension programme with additional content to supplement your course or serve as a confidence booster before a trip.
               </p>
-              <div className="service-price">£40</div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
@@ -249,7 +244,6 @@ export default function Home() {
               <p>
                 Dedicated sessions focused on speaking and listening skills. Build the confidence to hold real conversations in your target language.
               </p>
-              <div className="service-price">£40</div>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
