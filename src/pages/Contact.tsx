@@ -65,8 +65,9 @@ export default function Contact() {
         {
           from_name: form.name,
           from_email: form.email,
-          language: form.language,
-          level: form.level,
+          reply_to: form.email,
+          language: form.language || 'Not specified',
+          level: form.level || 'Not specified',
           message: form.message,
         },
         EMAILJS_PUBLIC_KEY,

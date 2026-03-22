@@ -15,7 +15,7 @@
 }
 
 .booking-card.highlighted {
-  border-color: #33AB99;
+  border-color: #35e8cd;
   border-width: 3px;
   box-shadow: 0 4px 20px var(--shadow);
 }
@@ -32,7 +32,7 @@
   font-weight: 600;
   border-radius: 2rem;
   white-space: nowrap;
-  border: 3px solid #33AB99;
+  border: 3px solid #35e8cd;
 }
 
 .booking-card-header {
