@@ -1,0 +1,399 @@
+/* ========================================
+   Theme Variables — Mike Masters Languages
+   ======================================== */
+
+:root,
+[data-theme='light'] {
+  --primary: #035E7B;
+  --primary-hover: #024d66;
+  --primary-light: rgba(3, 94, 123, 0.08);
+  --secondary: #33AB99;
+  --secondary-hover: #2a9585;
+  --accent: #BAA7FF;
+  --accent-hover: #a68fff;
+  --gold: #FFEE92;
+  --background: #F6F7FB;
+  --surface: #FFFFFF;
+  --surface-hover: #f0f2f6;
+  --card-bg: linear-gradient(135deg, #047ea5 0%, #035E7B 100%);
+  --card-text: #fff;
+  --card-text-muted: rgba(255, 255, 255, 0.75);
+  --text: #003C4D;
+  --text-muted: #527a87;
+  --border: #dce4e8;
+  --shadow: rgba(0, 60, 77, 0.06);
+  --shadow-lg: rgba(0, 60, 77, 0.12);
+  --gradient-hero: linear-gradient(135deg, #035E7B 0%, #33AB99 100%);
+  --gradient-text: linear-gradient(135deg, #035E7B 0%, #33AB99 100%);
+  --overlay: rgba(0, 60, 77, 0.5);
+  --nav-bg: rgba(246, 247, 251, 0.85);
+  --code-bg: #eceef4;
+  --bg-gradient: linear-gradient(160deg, #F6F7FB 0%, #e8f0ee 30%, #F6F7FB 50%, #ede8fc 80%, #F6F7FB 100%);
+  --star: #e8b100;
+}
+
+[data-theme='dark'] {
+  --primary: #33AB99;
+  --primary-hover: #3fc4af;
+  --primary-light: rgba(51, 171, 153, 0.12);
+  --secondary: #BAA7FF;
+  --secondary-hover: #cdbdff;
+  --accent: #FFEE92;
+  --accent-hover: #fff4b3;
+  --gold: #FFEE92;
+  --background: #003C4D;
+  --surface: #00485c;
+  --surface-hover: #005269;
+  --card-bg: #00485c;
+  --card-text: var(--text);
+  --card-text-muted: var(--text-muted);
+  --text: #F0F6F8;
+  --text-muted: #8fb8c4;
+  --border: #0a6178;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-lg: rgba(0, 0, 0, 0.5);
+  --gradient-hero: linear-gradient(135deg, #33AB99 0%, #BAA7FF 100%);
+  --gradient-text: linear-gradient(135deg, #33AB99 0%, #BAA7FF 100%);
+  --overlay: rgba(0, 40, 52, 0.7);
+  --nav-bg: rgba(0, 72, 92, 0.9);
+  --code-bg: #003040;
+  --bg-gradient: linear-gradient(160deg, #003C4D 0%, #004a5f 30%, #003C4D 50%, #003350 80%, #003C4D 100%);
+  --star: #FFEE92;
+}
+
+/* ========================================
+   Base Typography & Reset
+   ======================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   Button Styles
+   ======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  line-height: 1.4;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-lg);
+}
+
+.btn-lg {
+  padding: 1rem 2.25rem;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+}
+
+/* ========================================
+   Card Styles
+   ======================================== */
+
+.card {
+  background: var(--card-bg);
+  color: var(--card-text);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card h3 {
+  color: var(--card-text);
+}
+
+.card p,
+.card .compare-label,
+.card .price-detail {
+  color: var(--card-text-muted);
+}
+
+.card .compare-value,
+.card .price {
+  color: var(--card-text);
+}
+
+.card .btn-secondary,
+.lang-card .btn-secondary {
+  color: var(--card-text);
+  border-color: var(--card-text-muted);
+}
+
+.card .btn-secondary:hover,
+.lang-card .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--card-text);
+}
+
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 30px var(--shadow);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ========================================
+   Page Hero (shared across inner pages)
+   ======================================== */
+
+.page-hero {
+  padding: 8rem 0 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(3, 94, 123, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(51, 171, 153, 0.05) 0%, transparent 50%);
+  z-index: 0;
+}
+
+[data-theme='dark'] .page-hero::before {
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(51, 171, 153, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(186, 167, 255, 0.08) 0%, transparent 50%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.page-hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.page-hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+   Responsive Breakpoints (mobile-first)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-lg {
+    padding: 0.8rem 1.75rem;
+    font-size: 1rem;
+  }
+}
