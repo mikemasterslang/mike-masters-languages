@@ -161,6 +161,13 @@ ul, ol {
   background-clip: text;
 }
 
+.gradient-text-purple {
+  background: linear-gradient(135deg, #BAA7FF 0%, #a68fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* ========================================
    Button Styles
    ======================================== */

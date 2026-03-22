@@ -17,7 +17,7 @@ export default function Spanish() {
               <span className="spanish-flag-inline"><FlagIcon country="spain" size={20} /></span> Spanish Programmes
             </div>
             <h1>
-              Learn <span className="gradient-text">Spanish</span> Your Way
+              Learn Spanish <span className="gradient-text">Your</span> Way
             </h1>
             <p>
               Whether you want a structured deep-dive or a confidence-first crash course,
@@ -36,7 +36,7 @@ export default function Spanish() {
         <div className="container">
           <div className="spanish-course-grid">
             <div className="spanish-course-content fade-in-left">
-              <div className="hero-badge">Crash Course</div>
+              <div className="hero-badge">New</div>
               <h2>Spanish Before Spain</h2>
               <p className="spanish-course-subtitle">Confidence-First Training</p>
               <p className="spanish-course-tagline">
@@ -113,10 +113,8 @@ export default function Spanish() {
                   <li>A deeper understanding of how Spanish works</li>
                   <li>More time to build fluency foundations before you arrive</li>
                   <li>Speak comfortably, not just survive</li>
+                  <li>Keep yourself accountable with weekly conversations</li>
                 </ul>
-                <p className="spanish-course-note">
-                  Has a bit more accountability because of the weekly convos.
-                </p>
               </div>
               <div className="spanish-course-actions">
                 <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
@@ -126,12 +124,8 @@ export default function Spanish() {
             <div className="spanish-course-visual fade-in-left">
               <div className="spanish-visual-card travel-card">
                 <span className="spanish-card-icon">
-                  {/* Bull icon */}
                   <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22c-4 0-8-2-8-6 0-2 1-3.5 2.5-4.5C5 10 4 8 4 6c0-1.5 1-3 2-3 .5 0 1 .5 1.5 1L9 5.5C10 4.5 11 4 12 4s2 .5 3 1.5L16.5 4c.5-.5 1-1 1.5-1 1 0 2 1.5 2 3 0 2-1 4-2.5 5.5C19 12.5 20 14 20 16c0 4-4 6-8 6z"/>
-                    <circle cx="9" cy="14" r="1" fill="currentColor"/>
-                    <circle cx="15" cy="14" r="1" fill="currentColor"/>
-                    <path d="M10 18c.5.5 1.5.5 2 .5s1.5 0 2-.5"/>
+                    <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
                   </svg>
                 </span>
                 <h3>Beginners Travel Pack</h3>
@@ -186,7 +180,7 @@ export default function Spanish() {
                 </li>
                 <li>
                   <span className="compare-label">Best for</span>
-                  <span className="compare-value">Quick confidence boost</span>
+                  <span className="compare-value">Speak first approach</span>
                 </li>
                 <li>
                   <span className="compare-label">Style</span>
@@ -199,9 +193,7 @@ export default function Spanish() {
               <div className="compare-header travel-header">
                 <span className="compare-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22c-4 0-8-2-8-6 0-2 1-3.5 2.5-4.5C5 10 4 8 4 6c0-1.5 1-3 2-3 .5 0 1 .5 1.5 1L9 5.5C10 4.5 11 4 12 4s2 .5 3 1.5L16.5 4c.5-.5 1-1 1.5-1 1 0 2 1.5 2 3 0 2-1 4-2.5 5.5C19 12.5 20 14 20 16c0 4-4 6-8 6z"/>
-                    <circle cx="9" cy="14" r="1" fill="currentColor"/>
-                    <circle cx="15" cy="14" r="1" fill="currentColor"/>
+                    <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
                   </svg>
                 </span>
                 <h3>Beginners Travel Pack</h3>

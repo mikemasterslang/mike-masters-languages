@@ -118,7 +118,7 @@ export default function Home() {
               <h3>Spanish</h3>
               <p>
                 From conversational fluency to exam preparation, master one of the world's most spoken languages.
-                Includes our popular Travel Pack programme.
+                Includes the new Spanish before Spain course powered by the confidence-first method.
               </p>
               <Link to="/book-online" className="btn btn-secondary">Learn More</Link>
             </div>
@@ -253,8 +253,10 @@ export default function Home() {
               <p>
                 Learn alongside others in small, focused groups. Great for building conversational confidence and learning collaboratively.
               </p>
-              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.5rem', fontSize: '0.85rem', padding: '0.4rem 1rem' }}>Enquire Now</Link>
             </div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link to="/contact" className="btn btn-primary btn-lg">Enquire Now</Link>
           </div>
         </div>
       </section>
@@ -263,7 +265,7 @@ export default function Home() {
       <section className="section testimonials-section">
         <div className="container">
           <h2 className="section-title fade-in">
-            What Students <span className="gradient-text">Say</span>
+            What Students <span className="gradient-text-purple">Say</span>
           </h2>
           <p className="section-subtitle fade-in">
             Don't just take my word for it — hear from people who've experienced the lessons first-hand.
