@@ -10,6 +10,7 @@ const services = [
     features: ['Fully personalised curriculum', 'Flexible scheduling', 'All levels welcome', 'Exam prep or conversational focus'],
     duration: '55 min',
     highlight: false,
+    badge: '',
     cta: 'Enquire Now',
     ctaLink: '/contact',
   },
@@ -19,7 +20,8 @@ const services = [
     description: "A course designed to prepare you for real conversations using my confidence-first method. You'll speak from day one and arrive in Spain confident and prepared.",
     features: ['15–30 min daily practice', 'Confidence-first approach', 'Real-life scenarios', 'Mindset & strategy sessions'],
     duration: '4 weeks',
-    highlight: false,
+    highlight: true,
+    badge: 'New',
     cta: 'Enquire Now',
     ctaLink: '/contact',
   },
@@ -30,6 +32,7 @@ const services = [
     features: ['Additional content', 'Confidence booster', 'Supplements your course', 'Trip preparation'],
     duration: 'Extension',
     highlight: false,
+    badge: '',
     cta: 'Enquire Now',
     ctaLink: '/contact',
   },
@@ -39,7 +42,8 @@ const services = [
     description: 'Commit to your learning with a block of five 1-1 online sessions at a discounted rate.',
     features: ['5 online sessions', 'Personalised curriculum', 'Flexible scheduling', 'Best value option'],
     duration: '5 × 55 min',
-    highlight: true,
+    highlight: false,
+    badge: '',
     cta: 'Enquire Now',
     ctaLink: '/contact',
   },
@@ -50,6 +54,7 @@ const services = [
     features: ['35–50 min daily content', 'Live weekly practice call', 'Progressive skill-building', 'Real travel scenarios'],
     duration: 'Programme',
     highlight: false,
+    badge: '',
     cta: 'Enquire Now',
     ctaLink: '/contact',
   },
@@ -60,6 +65,7 @@ const services = [
     features: ['GCSE & A-Level focused', 'All four skills covered', 'Past paper practice', '100% target grade record'],
     duration: '55 min',
     highlight: false,
+    badge: '',
     cta: 'Enquire Now',
     ctaLink: '/contact',
   },
@@ -93,7 +99,7 @@ export default function BookOnline() {
                 key={service.id}
                 className={`booking-card card fade-in${service.highlight ? ' highlighted' : ''}`}
               >
-                {service.highlight && <div className="popular-badge">Best Value</div>}
+                {service.badge && <div className="popular-badge">{service.badge}</div>}
                 <div className="booking-card-header">
                   <h3>{service.title}</h3>
                   <span className="duration-badge">{service.duration}</span>
