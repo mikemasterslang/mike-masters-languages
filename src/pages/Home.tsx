@@ -6,40 +6,40 @@ import './Home.css';
 
 const reviews = [
   {
-    text: "Michael is a very good tutor, he is very patient with me and I enjoy my sessions. I would definitely recommend him.",
-    author: "Kahrel",
-  },
-  {
-    text: "My son was at very low confidence levels for French GCSE. We had 4 weeks of sessions with Michael and although we are still waiting for results, his confidence having done the exams is much better. Michael was very patient, and very willing to help. Gave prep for the first session in order to ascertain my son's working level. I genuinely couldn't have asked for more and can't recommend Michael highly enough.",
-    author: "Reshma",
-  },
-  {
-    text: "He is brilliant. He teaches myself and my daughter at the same time. The lessons are well structured, informative and at the perfect pace.",
-    author: "Naomi",
-  },
-  {
     text: "I took the Spanish course before travelling in Central America. The compact, concise format taught me all the basics and necessities that I needed to communicate effectively with the locals. It really enhanced my experiences while travelling!",
     author: "Kieran",
-  },
-  {
-    text: "My sessions with Michael really accelerated my vocabulary, grammar and conversational skills as well as my confidence in Spanish. From the very first session, I felt extremely confident and excited due to his knowledge and demeanor. His interesting and insightful lessons included learning about culture as well as just the language which I thoroughly enjoyed. Michael's patience and ability to help my learning really made a huge difference and I could not recommend him enough!",
-    author: "Liv",
   },
   {
     text: "Michael's Spanish course is outstanding! It's well-structured, easy to follow, and perfect for beginners. His teaching style is clear and engaging, making complex grammar concepts understandable. The diverse content, including interactive exercises and quizzes, kept me motivated. The flexibility of learning at my own pace was fantastic, and Michael's prompt feedback was invaluable. This course has significantly improved my language skills, and I highly recommend it to anyone looking to learn Spanish effectively. Muchas gracias, Michael!",
     author: "Jamie",
   },
   {
-    text: "Michael is an excellent tutor. My daughter finds him easy to follow, the lessons well structured and led by the areas of learning that she identified. He is extremely knowledgeable and friendly and she is very happy to be learning Spanish with Michael.",
-    author: "Laura",
-  },
-  {
-    text: "The tutoring has been great. Works at my own pace which is much appreciated. Lessons are well structured and informative. Can't fault a thing.",
-    author: "Cador",
+    text: "My sessions with Michael really accelerated my vocabulary, grammar and conversational skills as well as my confidence in Spanish. From the very first session, I felt extremely confident and excited due to his knowledge and demeanor. His interesting and insightful lessons included learning about culture as well as just the language which I thoroughly enjoyed. Michael's patience and ability to help my learning really made a huge difference and I could not recommend him enough!",
+    author: "Liv",
   },
   {
     text: "Mike has been absolutely brilliant. I've tried learning Spanish before with other teachers, and never got past one or two lessons. Either their approach, or the pressure as a beginner to speak immediately didn't work. Mike has been the opposite: he is an excellent teacher, combining the right amount of expectation and challenge with an understanding of what it's like to learn a language. He's very adaptable and his lessons are practical, engaging and interesting. As well as one to one lessons, I'm doing one of his courses, which is very useful and focuses on what you need to be able to speak with more confidence. His communication is also very good between lessons and I always feel he's going the extra mile to make sure you get the most out of working with him. Very pleased to have found his services and already recommended to others.",
     author: "Tom",
+  },
+  {
+    text: "He is brilliant. He teaches myself and my daughter at the same time. The lessons are well structured, informative and at the perfect pace.",
+    author: "Naomi",
+  },
+  {
+    text: "My son was at very low confidence levels for French GCSE. We had 4 weeks of sessions with Michael and although we are still waiting for results, his confidence having done the exams is much better. Michael was very patient, and very willing to help. Gave prep for the first session in order to ascertain my son's working level. I genuinely couldn't have asked for more and can't recommend Michael highly enough.",
+    author: "Reshma",
+  },
+  {
+    text: "Michael is an excellent tutor. My daughter finds him easy to follow, the lessons well structured and led by the areas of learning that she identified. He is extremely knowledgeable and friendly and she is very happy to be learning Spanish with Michael.",
+    author: "Laura",
+  },
+  {
+    text: "Michael is a very good tutor, he is very patient with me and I enjoy my sessions. I would definitely recommend him.",
+    author: "Kahrel",
+  },
+  {
+    text: "The tutoring has been great. Works at my own pace which is much appreciated. Lessons are well structured and informative. Can't fault a thing.",
+    author: "Cador",
   },
 ];
 
