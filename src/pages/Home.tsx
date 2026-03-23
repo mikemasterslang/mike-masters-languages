@@ -37,6 +37,10 @@ const reviews = [
     text: "The tutoring has been great. Works at my own pace which is much appreciated. Lessons are well structured and informative. Can't fault a thing.",
     author: "Cador",
   },
+  {
+    text: "Mike has been absolutely brilliant. I've tried learning Spanish before with other teachers, and never got past one or two lessons. Either their approach, or the pressure as a beginner to speak immediately didn't work. Mike has been the opposite: he is an excellent teacher, combining the right amount of expectation and challenge with an understanding of what it's like to learn a language. He's very adaptable and his lessons are practical, engaging and interesting. As well as one to one lessons, I'm doing one of his courses, which is very useful and focuses on what you need to be able to speak with more confidence. His communication is also very good between lessons and I always feel he's going the extra mile to make sure you get the most out of working with him. Very pleased to have found his services and already recommended to others.",
+    author: "Tom",
+  },
 ];
 
 export default function Home() {
