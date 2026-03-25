@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './hooks/useTheme';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,6 +12,7 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
+    <HelmetProvider>
     <ThemeProvider>
       <BrowserRouter>
         <Navbar />
@@ -25,5 +27,6 @@ export default function App() {
         <ScrollToTop />
       </BrowserRouter>
     </ThemeProvider>
+    </HelmetProvider>
   );
 }

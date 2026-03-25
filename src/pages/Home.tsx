@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import FlagIcon from '../components/FlagIcon';
 import './Home.css';
@@ -64,6 +65,11 @@ export default function Home() {
   }, [isPaused, nextReview]);
 
   return (
+    <>
+    <Helmet>
+      <title>Mike Masters Languages — Online Spanish, French & Russian Tutoring</title>
+      <meta name="description" content="Expert online language tutoring in Spanish, French and Russian. 1-to-1 lessons, GCSE & A-Level exam prep, and confidence-first Spanish courses. 100% target grade record." />
+    </Helmet>
     <main>
       {/* Hero */}
       <section className="hero">
@@ -341,5 +347,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import FlagIcon from '../components/FlagIcon';
 import './Spanish.css';
@@ -8,6 +9,11 @@ export default function Spanish() {
   useScrollAnimation();
 
   return (
+    <>
+    <Helmet>
+      <title>Spanish Lessons Online — Spanish Before Spain & Travel Courses | Mike Masters Languages</title>
+      <meta name="description" content="Learn Spanish online with Mike Masters Languages. Confidence-first Spanish courses including Spanish Before Spain and the Beginners Spanish Travel Pack. Speak from day one." />
+    </Helmet>
     <main className="spanish-page">
       {/* Hero */}
       <section className="page-hero spanish-hero">
@@ -296,5 +302,6 @@ export default function Spanish() {
         </div>
       </section>
     </main>
+    </>
   );
 }
