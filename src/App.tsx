@@ -11,7 +11,6 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <HelmetProvider>
     <ThemeProvider>
       <BrowserRouter>
         <Navbar />
@@ -26,6 +25,5 @@ export default function App() {
         <ScrollToTop />
       </BrowserRouter>
     </ThemeProvider>
-    </HelmetProvider>
   );
 }
