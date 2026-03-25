@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './hooks/useTheme';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';

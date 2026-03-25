@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
-import { Helmet } from 'react-helmet-async';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './Contact.css';
 
 interface FormData {
@@ -25,6 +25,10 @@ const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   useScrollAnimation();
+  usePageMeta(
+    'Contact Mike Masters Languages | Get in Touch',
+    'Get in touch with Mike Masters Languages to book a lesson or ask a question about Spanish, French or Russian tutoring. Fast response within 24 hours.'
+  );
 
   const [form, setForm] = useState<FormData>({
     name: '',
@@ -251,6 +255,5 @@ export default function Contact() {
         </div>
       </section>
     </main>
-    </>
   );
 }

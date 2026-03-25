@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { usePageMeta } from '../hooks/usePageMeta';
 import './BookOnline.css';
 
 const services = [
@@ -74,13 +74,12 @@ const services = [
 
 export default function BookOnline() {
   useScrollAnimation();
+  usePageMeta(
+    'Book a Language Lesson Online | Mike Masters Languages',
+    'Book online Spanish, French or Russian lessons with Mike Masters Languages. Choose from 1-to-1 sessions, block bookings, exam prep, and the Spanish Before Spain course.'
+  );
 
   return (
-    <>
-    <Helmet>
-      <title>Book a Language Lesson Online | Mike Masters Languages</title>
-      <meta name="description" content="Book online Spanish, French or Russian lessons with Mike Masters Languages. Choose from 1-to-1 sessions, block bookings, exam prep, and the Spanish Before Spain course." />
-    </Helmet>
     <main className="book-online-page">
       {/* Hero */}
       <section className="page-hero">
@@ -162,6 +161,5 @@ export default function BookOnline() {
         </div>
       </section>
     </main>
-    </>
   );
 }
