@@ -93,11 +93,6 @@ export default function Contact() {
   };
 
   return (
-    <>
-    <Helmet>
-      <title>Contact Mike Masters Languages | Get in Touch</title>
-      <meta name="description" content="Get in touch with Mike Masters Languages to book a lesson or ask a question about Spanish, French or Russian tutoring. Fast response within 24 hours." />
-    </Helmet>
     <main className="contact-page">
       {/* Hero */}
       <section className="page-hero">
