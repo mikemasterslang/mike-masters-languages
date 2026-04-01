@@ -25,6 +25,7 @@ const services = [
     badge: 'New',
     cta: 'Enquire Now',
     ctaLink: '/contact',
+    buyNowLink: '/contact',
   },
   {
     id: 'speak-up-abroad',
@@ -124,6 +125,15 @@ export default function BookOnline() {
                 >
                   {service.cta}
                 </Link>
+                {'buyNowLink' in service && (
+                  <Link
+                    to={(service as typeof service & { buyNowLink: string }).buyNowLink}
+                    className="btn btn-secondary booking-btn"
+                    style={{ marginTop: '0.75rem', border: '2px solid #fff' }}
+                  >
+                    Buy Now
+                  </Link>
+                )}
               </article>
             ))}
           </div>
