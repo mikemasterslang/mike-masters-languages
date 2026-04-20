@@ -225,7 +225,7 @@ export default function Spanish() {
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
               <h3>Exam Preparation</h3>
-              <p>Focused GCSE and A-Level preparation covering reading, writing, listening and speaking. 100% target grade record.</p>
+              <p>Focused GCSE and A-Level French, Spanish and Russian preparation covering reading, writing, listening and speaking. 100% target grade record.</p>
               <div className="tuition-price">
                 <span className="price">£49</span>
                 <span className="price-detail">per 55 min online</span>
