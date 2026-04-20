@@ -37,56 +37,45 @@ export default function Spanish() {
       </section>
 
       {/* Spanish Before Spain */}
-      <section className="section spanish-course-section">
+      <section className="section course-feature">
         <div className="container">
-          <div className="spanish-course-grid">
-            <div className="spanish-course-content fade-in-left">
-              <div className="hero-badge">New</div>
-              <h2>Spanish Before Spain</h2>
-              <p className="spanish-course-subtitle">Confidence-First Training</p>
-              <p className="spanish-course-tagline">
-                Prepare for real conversations — before you even land.
+          <div className="course-feature-grid">
+            <div className="course-feature-content fade-in-left">
+              <div className="hero-badge">Featured Course</div>
+              <h2>Spanish before Spain</h2>
+              <p className="course-powered">Powered by the Confidence-First Spanish Method</p>
+              <p className="course-tagline">
+                Speak confidently before you arrive — even if you're a complete beginner
               </p>
-              <div className="spanish-course-body">
+              <div className="course-body">
                 <p>
-                  Spanish Before Spain is a confidence-first training designed to prepare you for real conversations — before you even land.
+                  This is for travellers and digital nomads going to Spain who speak little to no Spanish and feel anxious about everyday conversations.
                 </p>
-                <p>You'll complete 15–30 minutes a day, with:</p>
-                <ul className="spanish-feature-list">
-                  <li>6 days of structured, independent practice</li>
-                  <li>A 7th day each week focused on mindset + strategy</li>
-                </ul>
-                <p>It's for people who want to:</p>
-                <ul className="spanish-feature-list">
-                  <li>Speak like a real person — not a textbook</li>
-                  <li>Feel calm when a local responds</li>
-                  <li>Recover when you forget words or get lost in conversation</li>
-                  <li>Sound natural, even as a beginner</li>
-                </ul>
+                <p>
+                  You want to experience Spain like a local, feel comfortable speaking, and maybe even be complimented on your Spanish — but apps and school taught you to recognise words, not actually speak, so you still freeze when it matters.
+                </p>
+                <p>
+                  Using a confidence-first, real-life method shaped by learning multiple languages and living abroad, you'll learn how to respond without panicking, handle daily situations, and speak imperfect Spanish with confidence.
+                </p>
+                <p className="course-highlight">
+                  Arrive in Spain feeling prepared, capable, and ready to belong instead of anxious and silent.
+                </p>
               </div>
-              <div className="spanish-course-actions">
+              <div className="course-actions">
                 <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Enquire Now</Link>
+                <Link to="/contact" className="btn btn-secondary btn-lg">Book an Enquiry Call</Link>
               </div>
             </div>
-            <div className="spanish-course-visual fade-in-right">
-              <div className="spanish-visual-card sbs-card">
-                <span className="spanish-card-flag"><FlagIcon country="spain" size={40} /></span>
-                <h3>Spanish Before Spain</h3>
+            <div className="course-feature-visual fade-in-right">
+              <div className="course-visual-card">
+                <span className="course-flag"><FlagIcon country="spain" size={80} /></span>
+                <h3>Spanish before Spain</h3>
                 <p>Confidence-First Method</p>
-                <div className="spanish-card-detail">
-                  <span className="detail-label">Daily commitment</span>
-                  <span className="detail-value">15–30 min</span>
-                </div>
-                <div className="spanish-card-detail">
-                  <span className="detail-label">Structure</span>
-                  <span className="detail-value">6 + 1 days/week</span>
-                </div>
-                <ul className="spanish-card-highlights">
-                  <li>Confidence-first approach</li>
-                  <li>Mindset &amp; strategy sessions</li>
-                  <li>Sound natural from day one</li>
-                  <li>Independent practice</li>
+                <ul className="course-highlights-list">
+                  <li>Speak from day one</li>
+                  <li>Real-life scenarios</li>
+                  <li>Handle daily situations</li>
+                  <li>Travel-ready confidence</li>
                 </ul>
               </div>
             </div>
@@ -95,58 +84,49 @@ export default function Spanish() {
       </section>
 
       {/* Beginners Spanish Travel Pack */}
-      <section className="section spanish-course-section alt-bg">
+      <section className="section course-feature alt-bg">
         <div className="container">
-          <div className="spanish-course-grid reverse">
-            <div className="spanish-course-content fade-in-right">
+          <div className="course-feature-grid reverse">
+            <div className="course-feature-content fade-in-right">
               <div className="hero-badge">In-Depth Programme</div>
               <h2>Beginners Spanish Travel Pack</h2>
-              <p className="spanish-course-subtitle">Structured &amp; Guided Learning</p>
-              <p className="spanish-course-tagline">
+              <p className="course-powered">Structured &amp; Guided Learning</p>
+              <p className="course-tagline">
                 More structure, more depth, and more speaking practice before your trip.
               </p>
-              <div className="spanish-course-body">
+              <div className="course-body">
                 <p>
                   The Beginners Spanish Travel Pack is designed for those who want more structure, more depth, and more speaking practice before their trip.
                 </p>
                 <p>
-                  You'll complete 35–50 minutes of focused content each day, 6 days a week. On the 6th day, we'll have a live call together where you'll actively practice what you've been working on that week.
+                  You'll complete 35–50 minutes of focused content each day, 6 days a week. On the 6th day, we'll have a live call together where you'll actively practise what you've been working on that week.
                 </p>
-                <ul className="spanish-feature-list">
+                <ul className="course-highlights-list" style={{ listStyle: 'none', padding: 0, marginTop: '0.75rem' }}>
                   <li>Real-life travel situations</li>
-                  <li>Progressive skill-building so you feel genuine improvement</li>
+                  <li>Progressive skill-building</li>
                   <li>A deeper understanding of how Spanish works</li>
-                  <li>More time to build fluency foundations before you arrive</li>
+                  <li>Live weekly practice call</li>
                   <li>Speak comfortably, not just survive</li>
-                  <li>Keep yourself accountable with weekly conversations</li>
                 </ul>
               </div>
-              <div className="spanish-course-actions">
+              <div className="course-actions">
                 <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
                 <Link to="/contact" className="btn btn-secondary btn-lg">Enquire Now</Link>
               </div>
             </div>
-            <div className="spanish-course-visual fade-in-left">
-              <div className="spanish-visual-card travel-card">
-                <span className="spanish-card-icon">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <div className="course-feature-visual fade-in-left">
+              <div className="course-visual-card">
+                <span className="course-flag">
+                  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
                   </svg>
                 </span>
                 <h3>Beginners Travel Pack</h3>
                 <p>Structured &amp; Guided</p>
-                <div className="spanish-card-detail">
-                  <span className="detail-label">Daily commitment</span>
-                  <span className="detail-value">35–50 min</span>
-                </div>
-                <div className="spanish-card-detail">
-                  <span className="detail-label">Structure</span>
-                  <span className="detail-value">6 days + live call</span>
-                </div>
-                <ul className="spanish-card-highlights">
-                  <li>Live weekly practice call</li>
+                <ul className="course-highlights-list">
+                  <li>35–50 min per day</li>
+                  <li>6 days + live weekly call</li>
                   <li>Real travel scenarios</li>
-                  <li>Progressive skill-building</li>
                   <li>Deeper fluency foundations</li>
                 </ul>
               </div>
@@ -155,84 +135,46 @@ export default function Spanish() {
         </div>
       </section>
 
-      {/* Comparison */}
-      <section className="section spanish-compare">
+      {/* Other Options */}
+      <section className="section why-challenges">
         <div className="container">
           <h2 className="section-title fade-in">
-            Which Programme is <span className="gradient-text">Right for You</span>?
+            Other <span className="gradient-text">Options</span>
           </h2>
           <p className="section-subtitle fade-in">
-            Both courses prepare you for Spain — choose the pace that fits your life.
+            Additional programmes to suit your goals.
           </p>
-          <div className="compare-grid">
-            <div className="compare-card card fade-in">
-              <div className="compare-header sbs-header">
-                <span className="compare-flag"><FlagIcon country="spain" size={24} /></span>
-                <h3>Spanish Before Spain</h3>
+          <div className="benefits-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+            <div className="benefit-card card fade-in">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
-              <ul className="compare-list">
-                <li>
-                  <span className="compare-label">Time per day</span>
-                  <span className="compare-value">15–30 min</span>
-                </li>
-                <li>
-                  <span className="compare-label">Weekly structure</span>
-                  <span className="compare-value">6 days practice + 1 mindset</span>
-                </li>
-                <li>
-                  <span className="compare-label">Live calls</span>
-                  <span className="compare-value">No</span>
-                </li>
-                <li>
-                  <span className="compare-label">Best for</span>
-                  <span className="compare-value">Speak first approach</span>
-                </li>
-                <li>
-                  <span className="compare-label">Style</span>
-                  <span className="compare-value">Independent &amp; flexible</span>
-                </li>
-              </ul>
-              <Link to="/book-online" className="btn btn-primary compare-btn">Choose This</Link>
+              <h3>6 Week Conversation Class — Individual</h3>
+              <p>A dedicated six-week programme focused entirely on your speaking and listening. Build conversational confidence quickly with this immersive method in your target language.</p>
+              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
-            <div className="compare-card card fade-in">
-              <div className="compare-header travel-header">
-                <span className="compare-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
-                  </svg>
-                </span>
-                <h3>Beginners Travel Pack</h3>
+            <div className="benefit-card card fade-in">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
-              <ul className="compare-list">
-                <li>
-                  <span className="compare-label">Time per day</span>
-                  <span className="compare-value">35–50 min</span>
-                </li>
-                <li>
-                  <span className="compare-label">Weekly structure</span>
-                  <span className="compare-value">6 days content + live call</span>
-                </li>
-                <li>
-                  <span className="compare-label">Live calls</span>
-                  <span className="compare-value">Yes — weekly</span>
-                </li>
-                <li>
-                  <span className="compare-label">Best for</span>
-                  <span className="compare-value">Deeper fluency foundations</span>
-                </li>
-                <li>
-                  <span className="compare-label">Style</span>
-                  <span className="compare-value">Guided with accountability</span>
-                </li>
-              </ul>
-              <Link to="/book-online" className="btn btn-primary compare-btn">Choose This</Link>
+              <h3>6 Week Conversation Class — Group</h3>
+              <p>Learn and practise alongside friends in a small, supportive group setting. Great for building conversational confidence together in a social environment before your trip. Maximum group size six.</p>
+              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
+            </div>
+            <div className="benefit-card card fade-in">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h3>6 Week Pre Exam Blast</h3>
+              <p>Intensive, targeted preparation in the lead-up to your GCSE or A-Level exams. Cover the key areas fast and go into your exam feeling ready. Available for Spanish and French.</p>
+              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* 1-1 Online Tuition */}
-      <section className="section spanish-tuition-section">
+      <section className="section course-section">
         <div className="container">
           <h2 className="section-title fade-in">
             One-on-One <span className="gradient-text">Online Tuition</span>
@@ -245,13 +187,7 @@ export default function Spanish() {
               Whether you'd like to learn Spanish, French or Russian, as an adult learner, regardless of your level and goals, I would love to help in any way that I can!
             </p>
             <p>
-              This can look like conversation classes, giving exercises to practice reading, listening and writing skills or covering everything to help you build an overall strong foundation in the language.
-            </p>
-            <p>
-              For the last five years, I am proud to say that I have helped all of my GCSE and A-level students achieve their target grades or better. Maybe you or someone you know feels completely lost with upcoming language exams or simply feel like you need a helping hand to get you over that final hurdle.
-            </p>
-            <p>
-              Whatever the requirements, I'd love to hear from you and see how I can help you maximise your potential!
+              For the last five years, I am proud to say that I have helped all of my GCSE and A-level students achieve their target grades or better. Whatever the requirements, I'd love to hear from you and see how I can help you maximise your potential!
             </p>
           </div>
           <div className="tuition-grid">
@@ -261,7 +197,15 @@ export default function Spanish() {
               </div>
               <h3>1-1 Online Lessons</h3>
               <p>Fully personalised curriculum with flexible scheduling. All levels welcome — from complete beginner to advanced.</p>
-              <Link to="/contact" className="btn btn-primary tuition-btn">Enquire Now</Link>
+              <div className="tuition-price">
+                <span className="price">£49</span>
+                <span className="price-detail">per 55 min online</span>
+              </div>
+              <div className="tuition-price">
+                <span className="price">£65</span>
+                <span className="price-detail">per 55 min in-person</span>
+              </div>
+              <Link to="/book-online" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
               <div className="tuition-icon">
@@ -269,7 +213,12 @@ export default function Spanish() {
               </div>
               <h3>5 Lesson Block Booking</h3>
               <p>Commit to your learning with a block of five 1-1 online sessions at a discounted rate.</p>
-              <Link to="/contact" className="btn btn-primary tuition-btn">Enquire Now</Link>
+              <div className="tuition-price">
+                <span className="price">£220</span>
+                <span className="price-detail">5 online lessons</span>
+              </div>
+              <div className="tuition-saving">Save £25</div>
+              <Link to="/book-online" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
               <div className="tuition-icon">
@@ -277,7 +226,15 @@ export default function Spanish() {
               </div>
               <h3>Exam Preparation</h3>
               <p>Focused GCSE and A-Level preparation covering reading, writing, listening and speaking. 100% target grade record.</p>
-              <Link to="/contact" className="btn btn-primary tuition-btn">Enquire Now</Link>
+              <div className="tuition-price">
+                <span className="price">£49</span>
+                <span className="price-detail">per 55 min online</span>
+              </div>
+              <div className="tuition-price">
+                <span className="price">£65</span>
+                <span className="price-detail">per 55 min in-person</span>
+              </div>
+              <Link to="/book-online" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
           </div>
         </div>
