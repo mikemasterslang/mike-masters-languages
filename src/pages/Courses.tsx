@@ -77,7 +77,24 @@ export default function Courses() {
       {/* Beginners Spanish Travel Pack */}
       <section className="section course-feature alt-bg">
         <div className="container">
-          <div className="course-feature-grid reverse">
+          <div className="course-feature-grid">
+            <div className="course-feature-visual fade-in-left">
+              <div className="course-visual-card">
+                <span className="course-flag">
+                  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                  </svg>
+                </span>
+                <h3>Beginners Travel Pack</h3>
+                <p>Structured &amp; Guided</p>
+                <ul className="course-highlights-list">
+                  <li>35–50 min per day</li>
+                  <li>6 days + live weekly call</li>
+                  <li>Real travel scenarios</li>
+                  <li>Deeper fluency foundations</li>
+                </ul>
+              </div>
+            </div>
             <div className="course-feature-content fade-in-right">
               <div className="hero-badge">In-Depth Programme</div>
               <h2>Beginners Spanish Travel Pack</h2>
@@ -103,23 +120,6 @@ export default function Courses() {
               <div className="course-actions">
                 <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
                 <Link to="/contact" className="btn btn-secondary btn-lg">Enquire Now</Link>
-              </div>
-            </div>
-            <div className="course-feature-visual fade-in-left">
-              <div className="course-visual-card">
-                <span className="course-flag">
-                  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
-                  </svg>
-                </span>
-                <h3>Beginners Travel Pack</h3>
-                <p>Structured &amp; Guided</p>
-                <ul className="course-highlights-list">
-                  <li>35–50 min per day</li>
-                  <li>6 days + live weekly call</li>
-                  <li>Real travel scenarios</li>
-                  <li>Deeper fluency foundations</li>
-                </ul>
               </div>
             </div>
           </div>
