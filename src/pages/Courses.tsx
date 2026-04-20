@@ -149,7 +149,7 @@ export default function Courses() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
               <h3>6 Week Conversation Class — Group</h3>
-              <p>Learn and practise alongside others in a small, supportive group setting. Great for building conversational confidence in a social environment.</p>
+              <p>Learn and practise alongside friends in a small, supportive group setting. Great for building conversational confidence together in a social environment before your trip. Maximum group size six.</p>
               <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
             <div className="benefit-card card fade-in">
