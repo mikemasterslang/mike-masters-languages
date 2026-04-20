@@ -157,7 +157,7 @@ export default function Courses() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
               <h3>6 Week Pre Exam Blast</h3>
-              <p>Intensive, targeted preparation in the lead-up to your GCSE or A-Level exams. Cover the key areas fast and go into your exam feeling ready.</p>
+              <p>Intensive, targeted preparation in the lead-up to your GCSE or A-Level exams. Cover the key areas fast and go into your exam feeling ready. Available for Spanish and French.</p>
               <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
           </div>
