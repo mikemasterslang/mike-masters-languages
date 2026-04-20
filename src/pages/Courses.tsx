@@ -27,6 +27,142 @@ export default function Courses() {
         </div>
       </section>
 
+      {/* Spanish Before Spain */}
+      <section className="section course-feature">
+        <div className="container">
+          <div className="course-feature-grid">
+            <div className="course-feature-content fade-in-left">
+              <div className="hero-badge">Featured Course</div>
+              <h2>Spanish before Spain</h2>
+              <p className="course-powered">Powered by the Confidence-First Spanish Method</p>
+              <p className="course-tagline">
+                Speak confidently before you arrive — even if you're a complete beginner
+              </p>
+              <div className="course-body">
+                <p>
+                  This is for travellers and digital nomads going to Spain who speak little to no Spanish and feel anxious about everyday conversations.
+                </p>
+                <p>
+                  You want to experience Spain like a local, feel comfortable speaking, and maybe even be complimented on your Spanish — but apps and school taught you to recognise words, not actually speak, so you still freeze when it matters.
+                </p>
+                <p>
+                  Using a confidence-first, real-life method shaped by learning multiple languages and living abroad, you'll learn how to respond without panicking, handle daily situations, and speak imperfect Spanish with confidence.
+                </p>
+                <p className="course-highlight">
+                  Arrive in Spain feeling prepared, capable, and ready to belong instead of anxious and silent.
+                </p>
+              </div>
+              <div className="course-actions">
+                <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
+                <Link to="/contact" className="btn btn-secondary btn-lg">Book an Enquiry Call</Link>
+              </div>
+            </div>
+            <div className="course-feature-visual fade-in-right">
+              <div className="course-visual-card">
+                <span className="course-flag"><FlagIcon country="spain" size={80} /></span>
+                <h3>Spanish before Spain</h3>
+                <p>Confidence-First Method</p>
+                <ul className="course-highlights-list">
+                  <li>Speak from day one</li>
+                  <li>Real-life scenarios</li>
+                  <li>Handle daily situations</li>
+                  <li>Travel-ready confidence</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Beginners Spanish Travel Pack */}
+      <section className="section course-feature alt-bg">
+        <div className="container">
+          <div className="course-feature-grid reverse">
+            <div className="course-feature-content fade-in-right">
+              <div className="hero-badge">In-Depth Programme</div>
+              <h2>Beginners Spanish Travel Pack</h2>
+              <p className="course-powered">Structured &amp; Guided Learning</p>
+              <p className="course-tagline">
+                More structure, more depth, and more speaking practice before your trip.
+              </p>
+              <div className="course-body">
+                <p>
+                  The Beginners Spanish Travel Pack is designed for those who want more structure, more depth, and more speaking practice before their trip.
+                </p>
+                <p>
+                  You'll complete 35–50 minutes of focused content each day, 6 days a week. On the 6th day, we'll have a live call together where you'll actively practise what you've been working on that week.
+                </p>
+                <ul className="course-highlights-list" style={{ listStyle: 'none', padding: 0, marginTop: '0.75rem' }}>
+                  <li>Real-life travel situations</li>
+                  <li>Progressive skill-building</li>
+                  <li>A deeper understanding of how Spanish works</li>
+                  <li>Live weekly practice call</li>
+                  <li>Speak comfortably, not just survive</li>
+                </ul>
+              </div>
+              <div className="course-actions">
+                <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
+                <Link to="/contact" className="btn btn-secondary btn-lg">Enquire Now</Link>
+              </div>
+            </div>
+            <div className="course-feature-visual fade-in-left">
+              <div className="course-visual-card">
+                <span className="course-flag">
+                  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                  </svg>
+                </span>
+                <h3>Beginners Travel Pack</h3>
+                <p>Structured &amp; Guided</p>
+                <ul className="course-highlights-list">
+                  <li>35–50 min per day</li>
+                  <li>6 days + live weekly call</li>
+                  <li>Real travel scenarios</li>
+                  <li>Deeper fluency foundations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Options */}
+      <section className="section why-challenges">
+        <div className="container">
+          <h2 className="section-title fade-in">
+            Other <span className="gradient-text">Options</span>
+          </h2>
+          <p className="section-subtitle fade-in">
+            Additional programmes to suit your goals.
+          </p>
+          <div className="benefits-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+            <div className="benefit-card fade-in">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h3>6 Week Conversation Class — Individual</h3>
+              <p>A dedicated six-week programme focused entirely on speaking and listening. Build the confidence to hold real conversations in your target language.</p>
+              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
+            </div>
+            <div className="benefit-card fade-in">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3>6 Week Conversation Class — Group</h3>
+              <p>Learn and practise alongside others in a small, supportive group setting. Great for building conversational confidence in a social environment.</p>
+              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
+            </div>
+            <div className="benefit-card fade-in">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h3>Pre Exam Blast</h3>
+              <p>Intensive, targeted preparation in the lead-up to your GCSE or A-Level exams. Cover the key areas fast and go into your exam feeling ready.</p>
+              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* 1-1 Online Tuition */}
       <section className="section course-section">
         <div className="container">
@@ -41,13 +177,7 @@ export default function Courses() {
               Whether you'd like to learn Spanish, French or Russian, as an adult learner, regardless of your level and goals, I would love to help in any way that I can!
             </p>
             <p>
-              This can look like conversation classes, giving exercises to practice reading, listening and writing skills or covering everything to help you build an overall strong foundation in the language.
-            </p>
-            <p>
-              For the last five years, I am proud to say that I have helped all of my GCSE and A-level students achieve their target grades or better. Maybe you or someone you know feels completely lost with upcoming language exams or simply feel like you need a helping hand to get you over that final hurdle.
-            </p>
-            <p>
-              Whatever the requirements, I'd love to hear from you and see how I can help you maximise your potential!
+              For the last five years, I am proud to say that I have helped all of my GCSE and A-level students achieve their target grades or better. Whatever the requirements, I'd love to hear from you and see how I can help you maximise your potential!
             </p>
           </div>
           <div className="tuition-grid">
@@ -95,105 +225,6 @@ export default function Courses() {
                 <span className="price-detail">per 55 min in-person</span>
               </div>
               <Link to="/book-online" className="btn btn-primary tuition-btn">Book Now</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Spanish before Spain */}
-      <section className="section course-feature">
-        <div className="container">
-          <div className="course-feature-grid">
-            <div className="course-feature-content fade-in-left">
-              <div className="hero-badge">Featured Course</div>
-              <h2>Spanish before Spain</h2>
-              <p className="course-powered">Powered by the Confidence-First Spanish Method</p>
-              <p className="course-tagline">
-                Speak confidently before you arrive — even if you're a complete beginner
-              </p>
-              <div className="course-body">
-                <p>
-                  This is for travelers and digital nomads going to Spain who speak little to no Spanish and feel anxious about everyday conversations.
-                </p>
-                <p>
-                  You want to experience Spain like a local, feel comfortable speaking, and maybe even be complimented on your Spanish — but apps and school taught you to recognize words, not actually speak, so you still freeze when it matters.
-                </p>
-                <p>
-                  This programme is built to change that.
-                </p>
-                <p>
-                  Using a confidence-first, real-life method shaped by learning multiple languages and living abroad, you'll learn how to respond without panicking, handle daily situations, and speak imperfect Spanish with confidence.
-                </p>
-                <p>
-                  You won't be fluent in four weeks — but you won't be silent either.
-                </p>
-                <p className="course-highlight">
-                  Arrive in Spain feeling prepared, capable, and ready to belong instead of anxious and silent.
-                </p>
-              </div>
-              <div className="course-actions">
-                <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Book an Enquiry Call</Link>
-              </div>
-            </div>
-            <div className="course-feature-visual fade-in-right">
-              <div className="course-visual-card">
-                <span className="course-flag"><FlagIcon country="spain" size={80} /></span>
-                <h3>Spanish before Spain</h3>
-                <p>Confidence-First Method</p>
-                <ul className="course-highlights-list">
-                  <li>Speak from day one</li>
-                  <li>Real-life scenarios</li>
-                  <li>Handle daily situations</li>
-                  <li>Travel-ready confidence</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* More Courses */}
-      <section className="section why-challenges">
-        <div className="container">
-          <h2 className="section-title fade-in">
-            More <span className="gradient-text">Options</span>
-          </h2>
-          <p className="section-subtitle fade-in">
-            Additional programmes and session types to suit your goals.
-          </p>
-          <div className="benefits-grid">
-            <div className="benefit-card fade-in">
-              <div className="benefit-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              </div>
-              <h3>Speak Up Abroad</h3>
-              <p>Extension programme with additional content to supplement your course or boost confidence before a trip.</p>
-              <div className="benefit-price">£40</div>
-            </div>
-            <div className="benefit-card fade-in">
-              <div className="benefit-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              </div>
-              <h3>Conversation Practice</h3>
-              <p>Dedicated sessions focused on speaking and listening skills in real-world scenarios.</p>
-              <div className="benefit-price">£40</div>
-            </div>
-            <div className="benefit-card fade-in">
-              <div className="benefit-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <h3>Small Group Sessions</h3>
-              <p>Learn collaboratively in small, focused groups. Great for building conversational confidence.</p>
-              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
-            </div>
-            <div className="benefit-card fade-in">
-              <div className="benefit-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              </div>
-              <h3>Travel Packs</h3>
-              <p>Complete Spanish and French travel programmes — be confident with locals in under 30 days.</p>
-              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
           </div>
         </div>
