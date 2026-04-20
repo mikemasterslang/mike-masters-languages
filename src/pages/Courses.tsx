@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { usePageMeta } from '../hooks/usePageMeta';
 import FlagIcon from '../components/FlagIcon';
 import './Courses.css';
 
 export default function Courses() {
   useScrollAnimation();
+  usePageMeta(
+    'Language Learning Courses | Mike Masters Languages',
+    'Online Spanish, French and Russian courses with Mike Masters Languages. 1-to-1 lessons from £49, 5-lesson block bookings, exam prep, and the Spanish Before Spain travel course.'
+  );
 
   return (
     <main className="courses-page">
