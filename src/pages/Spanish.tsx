@@ -45,7 +45,7 @@ export default function Spanish() {
               <h2>Spanish before Spain</h2>
               <p className="course-powered">Powered by the Confidence-First Spanish Method</p>
               <p className="course-tagline">
-                Speak confidently before you arrive - even if you've got limited Spanish ability
+                Speak confidently before you arrive - even with limited previous Spanish experience
               </p>
               <div className="course-body">
                 <p>
