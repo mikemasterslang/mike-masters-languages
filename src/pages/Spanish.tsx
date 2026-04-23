@@ -102,19 +102,20 @@ export default function Spanish() {
                   <li>6 days + live weekly call</li>
                   <li>Real travel scenarios</li>
                   <li>Deeper fluency foundations</li>
+                  <li>Perfect for beginners</li>
                 </ul>
               </div>
             </div>
             <div className="course-feature-content fade-in-right">
               <div className="hero-badge">In-Depth Programme</div>
               <h2>Beginners Spanish Travel Pack</h2>
-              <p className="course-powered">Structured &amp; Guided Learning</p>
+              <p className="course-powered">Structured &amp; Guided Learning for complete beginners</p>
               <p className="course-tagline">
                 More structure, more depth, and more speaking practice before your trip.
               </p>
               <div className="course-body">
                 <p>
-                  The Beginners Spanish Travel Pack is designed for those who want more structure, more depth, and more speaking practice before their trip.
+                  The Beginners Spanish Travel Pack is designed for those who have never studied Spanish before but want more structure, more depth, and more speaking practice before their trip.
                 </p>
                 <p>
                   You'll complete 35–50 minutes of focused content each day, 6 days a week. On the 6th day, we'll have a live call together where you'll actively practise what you've been working on that week.
