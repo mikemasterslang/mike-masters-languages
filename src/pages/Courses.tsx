@@ -36,11 +36,11 @@ export default function Courses() {
               <h2>Spanish before Spain</h2>
               <p className="course-powered">Powered by the Confidence-First Spanish Method</p>
               <p className="course-tagline">
-                Speak confidently before you arrive — even if you're a complete beginner
+                Speak confidently before you arrive - even if you've got limited Spanish ability
               </p>
               <div className="course-body">
                 <p>
-                  This is for travellers and digital nomads going to Spain who speak little to no Spanish and feel anxious about everyday conversations.
+                  This is for travellers and digital nomads going to Spain who have limited experience of learning Spanish but feel anxious about everyday conversations.
                 </p>
                 <p>
                   You want to experience Spain like a local, feel comfortable speaking, and maybe even be complimented on your Spanish — but apps and school taught you to recognise words, not actually speak, so you still freeze when it matters.
@@ -67,6 +67,7 @@ export default function Courses() {
                   <li>Real-life scenarios</li>
                   <li>Handle daily situations</li>
                   <li>Travel-ready confidence</li>
+                  <li>Perfect for those with limited experience of Spanish</li>
                 </ul>
               </div>
             </div>
