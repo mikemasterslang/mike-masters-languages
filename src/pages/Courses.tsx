@@ -100,7 +100,7 @@ export default function Courses() {
             <div className="course-feature-content fade-in-right">
               <div className="hero-badge">In-Depth Programme</div>
               <h2>Beginners Spanish Travel Pack</h2>
-              <p className="course-powered">Structured &amp; Guided Learning for complete beginners</p>
+              <p className="course-powered">The Complete Structured Learning Guide for Complete Beginners</p>
               <p className="course-tagline">
                 More structure, more depth, and more speaking practice before your trip.
               </p>
