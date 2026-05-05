@@ -27,10 +27,8 @@ export default function Navbar() {
 
   const navLinks = [
     { to: '/', label: 'Home' },
-    { to: '/spanish', label: 'Courses' },
-    { to: '/book-online', label: 'Book Online' },
-    { to: '/contact', label: 'Contact' },
     { to: '/get-started', label: 'Get Started' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   return (
