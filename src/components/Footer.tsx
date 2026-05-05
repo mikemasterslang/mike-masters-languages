@@ -24,9 +24,7 @@ export default function Footer() {
             <h4>Pages</h4>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/spanish">Spanish</Link></li>
-
-              <li><Link to="/book-online">Book Online</Link></li>
+              <li><Link to="/get-started">Get Started</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -49,8 +47,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link to="/contact" className="btn btn-primary btn-sm footer-cta">
-                  Book a Session
+                <Link to="/get-started" className="btn btn-primary btn-sm footer-cta">
+                  Get Started
                 </Link>
               </li>
             </ul>
