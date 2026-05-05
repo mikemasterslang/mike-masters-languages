@@ -129,7 +129,6 @@ export default function Home() {
                 From conversational fluency to exam preparation, master one of the world's most spoken languages.
                 Includes the new Spanish before Spain course powered by the confidence-first method.
               </p>
-              <Link to="/book-online" className="btn btn-secondary">Learn More</Link>
             </div>
             <div className="lang-card fade-in">
               <div className="lang-flag"><FlagIcon country="france" size={72} /></div>
@@ -138,7 +137,6 @@ export default function Home() {
                 Build confidence in reading, writing, listening and speaking. Perfect for GCSE, A-Level or adult learners
                 exploring French culture.
               </p>
-              <Link to="/book-online" className="btn btn-secondary">Learn More</Link>
             </div>
             <div className="lang-card fade-in">
               <div className="lang-flag"><FlagIcon country="russia" size={72} /></div>
@@ -147,7 +145,6 @@ export default function Home() {
                 Take on a rewarding challenge with Russian. From Cyrillic basics to confident conversation,
                 we'll guide you every step of the way.
               </p>
-              <Link to="/book-online" className="btn btn-secondary">Learn More</Link>
             </div>
           </div>
         </div>
