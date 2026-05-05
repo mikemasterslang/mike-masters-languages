@@ -404,7 +404,7 @@ export default function GetStarted() {
                 <span className="price">£65</span>
                 <span className="price-detail">per 55 min in-person</span>
               </div>
-              <Link to="/book-online" className="btn btn-primary tuition-btn">Book Now</Link>
+              <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
               <div className="tuition-icon">
@@ -417,7 +417,7 @@ export default function GetStarted() {
                 <span className="price-detail">5 online lessons</span>
               </div>
               <div className="tuition-saving">Save £25</div>
-              <Link to="/book-online" className="btn btn-primary tuition-btn">Book Now</Link>
+              <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
               <div className="tuition-icon">
@@ -433,7 +433,7 @@ export default function GetStarted() {
                 <span className="price">£65</span>
                 <span className="price-detail">per 55 min in-person</span>
               </div>
-              <Link to="/book-online" className="btn btn-primary tuition-btn">Book Now</Link>
+              <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
           </div>
         </div>
