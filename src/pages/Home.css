@@ -290,6 +290,27 @@
   color: var(--card-text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.service-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--card-text);
+}
+
+.service-features svg {
+  flex-shrink: 0;
 }
 
 .service-price {
