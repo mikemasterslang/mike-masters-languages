@@ -13,6 +13,7 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+type AgeRange = '16-17' | '18-24' | '25-34' | '35-44' | '45+' | '';
 type Level = 'beginner' | 'some-experience' | '';
 type Financial = 'yes' | 'no' | '';
 
@@ -24,6 +25,7 @@ export default function GetStarted() {
   );
 
   const [step, setStep] = useState(1);
+  const [age, setAge] = useState<AgeRange>('');
   const [level, setLevel] = useState<Level>('');
   const [financial, setFinancial] = useState<Financial>('');
   const [goals, setGoals] = useState('');
@@ -33,7 +35,7 @@ export default function GetStarted() {
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState('');
 
-  const totalSteps = 4;
+  const totalSteps = 5;
 
   const handleNext = () => setStep(s => s + 1);
   const handleBack = () => setStep(s => s - 1);
@@ -64,7 +66,7 @@ export default function GetStarted() {
           reply_to: form.email,
           language: form.language,
           level: level === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
-          message: `FINANCIAL READINESS: ${financial === 'yes' ? 'Yes — ready to invest' : 'Not quite yet'}\n\nGOALS & CHALLENGES:\n${goals}\n\nCOUNTRY OF RESIDENCY: ${form.country}`,
+          message: `AGE RANGE: ${age}\n\nFINANCIAL READINESS: ${financial === 'yes' ? 'Yes — ready to invest' : 'Not quite yet'}\n\nGOALS & CHALLENGES:\n${goals}\n\nCOUNTRY OF RESIDENCY: ${form.country}`,
         },
         EMAILJS_PUBLIC_KEY,
       );
@@ -113,6 +115,23 @@ export default function GetStarted() {
 
               {step === 1 && (
                 <div className="gs-step">
+                  <h2>I am...</h2>
+                  <p className="gs-subtitle">Select your age range.</p>
+                  <div className="gs-options gs-options-grid">
+                    {(['16-17', '18-24', '25-34', '35-44', '45+'] as AgeRange[]).map((range) => (
+                      <button key={range} type="button" className={`gs-option gs-option-compact${age === range ? ' selected' : ''}`} onClick={() => setAge(range)}>
+                        <span className="gs-option-title">{range}</span>
+                      </button>
+                    ))}
+                  </div>
+                  <div className="gs-nav gs-nav-right">
+                    <button className="btn btn-primary btn-lg" onClick={handleNext} disabled={!age}>Continue</button>
+                  </div>
+                </div>
+              )}
+
+              {step === 2 && (
+                <div className="gs-step">
                   <h2>What is your current level?</h2>
                   <p className="gs-subtitle">Select the option that best describes you.</p>
                   <div className="gs-options">
@@ -125,13 +144,14 @@ export default function GetStarted() {
                       <span className="gs-option-desc">I have studied this language before but want to improve</span>
                     </button>
                   </div>
-                  <div className="gs-nav gs-nav-right">
+                  <div className="gs-nav">
+                    <button className="btn btn-secondary" onClick={handleBack}>Back</button>
                     <button className="btn btn-primary btn-lg" onClick={handleNext} disabled={!level}>Continue</button>
                   </div>
                 </div>
               )}
 
-              {step === 2 && (
+              {step === 3 && (
                 <div className="gs-step">
                   <h2>It's great you've found me!</h2>
                   <p className="gs-subtitle">Are you actually ready to invest in your language learning financially?</p>
@@ -152,7 +172,7 @@ export default function GetStarted() {
                 </div>
               )}
 
-              {step === 3 && (
+              {step === 4 && (
                 <div className="gs-step">
                   <h2>Tell me a bit more</h2>
                   <p className="gs-subtitle">What has made you want to start now? What's been your biggest challenge so far and what are your goals?</p>
@@ -170,7 +190,7 @@ export default function GetStarted() {
                 </div>
               )}
 
-              {step === 4 && (
+              {step === 5 && (
                 <div className="gs-step">
                   <h2>Almost there!</h2>
                   <p className="gs-subtitle">Fill in your details and I'll be in touch within 24 hours.</p>
