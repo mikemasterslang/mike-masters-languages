@@ -213,27 +213,27 @@ export default function Home() {
               <div className="service-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
-              <h3>1-to-1 Sessions</h3>
+              <h3>1-to-1 Lessons</h3>
               <p>
-                Personalised lessons tailored to your specific needs, pace and goals. Flexible scheduling that fits your weekly routine.
+                Personalised lessons tailored to your individual needs, pace, and learning goals. Available for all three languages and all levels.
               </p>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               </div>
-              <h3>30 Day Spanish Courses</h3>
+              <h3>Spanish Before Spain</h3>
               <p>
-                Spanish courses designed to build your confidence and abilities in the language in under 30 days, powered by my confidence-first method.
+                A course designed to prepare you for real conversations using my confidence-first method. You'll speak from day one and arrive in Spain confident and prepared.
               </p>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
-              <h3>Exam Preparation</h3>
+              <h3>6 Week Group Sessions</h3>
               <p>
-                Targeted GCSE and A-Level preparation covering all four skills. 100% target grade record.
+                Learn and practise alongside friends in a small, supportive group setting. Great for building conversational confidence together before your trip. Maximum group size six.
               </p>
             </div>
             <div className="service-card card fade-in">
@@ -247,20 +247,20 @@ export default function Home() {
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
               </div>
-              <h3>Conversation Practice</h3>
+              <h3>Beginners Spanish Travel Pack</h3>
               <p>
-                Dedicated sessions focused on speaking and listening skills. Build the confidence to hold real conversations in your target language.
+                More structure, more depth, and more speaking practice before your trip — with weekly live calls included.
               </p>
             </div>
             <div className="service-card card fade-in">
               <div className="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
-              <h3>Small Group Sessions</h3>
+              <h3>Exam Preparation</h3>
               <p>
-                Learn alongside others in small, focused groups. Great for building conversational confidence and learning collaboratively.
+                Focused GCSE and A-Level preparation. Covers reading, writing, listening, and speaking. 100% target grade record.
               </p>
             </div>
           </div>
