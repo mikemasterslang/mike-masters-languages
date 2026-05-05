@@ -7,6 +7,7 @@ import FlagIcon from '../components/FlagIcon';
 import './GetStarted.css';
 import './Spanish.css';
 import './Courses.css';
+import './BookOnline.css';
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -426,19 +427,32 @@ export default function GetStarted() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section">
+      {/* How It Works */}
+      <section className="section how-it-works">
         <div className="container">
-          <div className="spanish-cta fade-in">
-            <span className="spanish-cta-flag"><FlagIcon country="spain" size={40} /></span>
-            <h2>Ready to Start Your Spanish Journey?</h2>
-            <p>
-              Whether it's 15 minutes or 50 minutes a day — the important thing is to start.
-              Arrive in Spain feeling prepared, capable, and ready to belong.
-            </p>
-            <div className="spanish-cta-actions">
-              <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
-              <Link to="/contact" className="btn btn-secondary btn-lg">Book an Enquiry Call</Link>
+          <h2 className="section-title fade-in">
+            How It <span className="gradient-text">Works</span>
+          </h2>
+          <p className="section-subtitle fade-in">
+            Getting started is simple — just three easy steps.
+          </p>
+          <div className="steps-grid">
+            <div className="step-card fade-in">
+              <div className="step-number">1</div>
+              <h3>Get in Touch</h3>
+              <p>Send me a message through the contact form or book directly. Tell me about your goals and current level.</p>
+            </div>
+            <div className="step-connector" aria-hidden="true" />
+            <div className="step-card fade-in">
+              <div className="step-number">2</div>
+              <h3>Plan Your Sessions</h3>
+              <p>We'll work out a schedule and programme that fits your needs, whether that's weekly sessions or an intensive course.</p>
+            </div>
+            <div className="step-connector" aria-hidden="true" />
+            <div className="step-card fade-in">
+              <div className="step-number">3</div>
+              <h3>Start Learning</h3>
+              <p>Begin your language journey with engaging, personalised lessons designed to build real-world confidence.</p>
             </div>
           </div>
         </div>
