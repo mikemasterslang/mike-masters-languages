@@ -8,6 +8,7 @@ import Spanish from './pages/Spanish';
 import Courses from './pages/Courses';
 import BookOnline from './pages/BookOnline';
 import Contact from './pages/Contact';
+import GetStarted from './pages/GetStarted';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/book-online" element={<BookOnline />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/get-started" element={<GetStarted />} />
         </Routes>
         <Footer />
         <ScrollToTop />

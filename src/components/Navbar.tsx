@@ -30,6 +30,7 @@ export default function Navbar() {
     { to: '/spanish', label: 'Courses' },
     { to: '/book-online', label: 'Book Online' },
     { to: '/contact', label: 'Contact' },
+    { to: '/get-started', label: 'Get Started' },
   ];
 
   return (

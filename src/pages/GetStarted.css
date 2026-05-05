@@ -1,0 +1,247 @@
+.gs-section {
+  padding-top: 2rem;
+}
+
+.gs-card {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+/* Progress Bar */
+.gs-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.gs-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.gs-progress-fill {
+  height: 100%;
+  background: var(--gradient-hero);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.gs-step-label {
+  font-size: 0.85rem;
+  color: var(--card-text-muted);
+  white-space: nowrap;
+}
+
+/* Step */
+.gs-step h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--card-text);
+  margin-bottom: 0.5rem;
+}
+
+.gs-subtitle {
+  color: var(--card-text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Option Buttons */
+.gs-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gs-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.875rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.gs-option:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.gs-option.selected {
+  border-color: var(--secondary);
+  background: rgba(51, 171, 153, 0.15);
+}
+
+.gs-option-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--card-text);
+}
+
+.gs-option-desc {
+  font-size: 0.9rem;
+  color: var(--card-text-muted);
+}
+
+/* Textarea */
+.gs-textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--card-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.975rem;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.gs-textarea::placeholder {
+  color: var(--card-text-muted);
+}
+
+.gs-textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+/* Navigation */
+.gs-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.gs-nav-right {
+  justify-content: flex-end;
+}
+
+/* Details Form */
+.gs-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.gs-details-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.gs-details-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--card-text);
+}
+
+.gs-details-form .required {
+  color: #ff6b6b;
+}
+
+.gs-details-form input,
+.gs-details-form select {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--card-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.975rem;
+  transition: border-color 0.2s ease;
+}
+
+.gs-details-form input::placeholder {
+  color: var(--card-text-muted);
+}
+
+.gs-details-form input:focus,
+.gs-details-form select:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.gs-details-form input.error,
+.gs-details-form select.error {
+  border-color: #ff6b6b;
+}
+
+.gs-details-form select option {
+  background: var(--primary);
+  color: #fff;
+}
+
+.field-error {
+  font-size: 0.82rem;
+  color: #ff6b6b;
+}
+
+.send-error {
+  font-size: 0.9rem;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+.gs-details-form .gs-nav {
+  margin-top: 0.75rem;
+}
+
+/* Success */
+.gs-success {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 2.5rem;
+}
+
+.gs-success-icon {
+  margin-bottom: 1.5rem;
+}
+
+.gs-success h2 {
+  color: var(--card-text);
+  margin-bottom: 1rem;
+}
+
+.gs-success p {
+  color: var(--card-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gs-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .gs-nav {
+    flex-direction: column-reverse;
+  }
+
+  .gs-nav .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gs-nav-right {
+    flex-direction: column;
+  }
+}
