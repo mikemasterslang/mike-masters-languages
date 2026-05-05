@@ -266,10 +266,6 @@ export default function GetStarted() {
                   Arrive in Spain feeling prepared, capable, and ready to belong instead of anxious and silent.
                 </p>
               </div>
-              <div className="course-actions">
-                <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Book an Enquiry Call</Link>
-              </div>
             </div>
             <div className="course-feature-visual fade-in-right">
               <div className="course-visual-card">
@@ -332,10 +328,6 @@ export default function GetStarted() {
                   <li>Live weekly practice call</li>
                   <li>Speak comfortably, not just survive</li>
                 </ul>
-              </div>
-              <div className="course-actions">
-                <Link to="/book-online" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Enquire Now</Link>
               </div>
             </div>
           </div>
