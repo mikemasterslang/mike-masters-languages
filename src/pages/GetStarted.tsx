@@ -95,8 +95,8 @@ export default function GetStarted() {
         <div className="container">
           <div className="gs-video-wrapper fade-in">
             <iframe
-              src="https://player.vimeo.com/video/1189649181?title=0&byline=0&portrait=0"
-              allow="fullscreen; picture-in-picture"
+              src="https://www.youtube.com/embed/Bunq2UpdvcM"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="Welcome from Mike"
             />
