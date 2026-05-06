@@ -186,7 +186,7 @@
 }
 
 .blog-table tr:nth-child(even) td {
-  background: var(--card-bg);
+  background: rgba(3, 94, 123, 0.05);
 }
 
 .blog-table td strong {
