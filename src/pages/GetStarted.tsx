@@ -90,6 +90,20 @@ export default function GetStarted() {
         </div>
       </section>
 
+      {/* Welcome Video */}
+      <section className="section gs-video-section">
+        <div className="container">
+          <div className="gs-video-wrapper fade-in">
+            <iframe
+              src="https://player.vimeo.com/video/1189649181?title=0&byline=0&portrait=0"
+              allow="fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Welcome from Mike"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Application Form */}
       <section className="section gs-section">
         <div className="container">
