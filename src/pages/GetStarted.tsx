@@ -410,14 +410,6 @@ export default function GetStarted() {
               </div>
               <h3>1-1 Online Lessons</h3>
               <p>Fully personalised curriculum with flexible scheduling. All levels welcome — from complete beginner to advanced.</p>
-              <div className="tuition-price">
-                <span className="price">£49</span>
-                <span className="price-detail">per 55 min online</span>
-              </div>
-              <div className="tuition-price">
-                <span className="price">£65</span>
-                <span className="price-detail">per 55 min in-person</span>
-              </div>
               <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
@@ -426,11 +418,6 @@ export default function GetStarted() {
               </div>
               <h3>5 Lesson Block Booking</h3>
               <p>Commit to your learning with a block of five 1-1 online sessions at a discounted rate.</p>
-              <div className="tuition-price">
-                <span className="price">£220</span>
-                <span className="price-detail">5 online lessons</span>
-              </div>
-              <div className="tuition-saving">Save £25</div>
               <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
@@ -439,14 +426,6 @@ export default function GetStarted() {
               </div>
               <h3>Exam Preparation</h3>
               <p>Focused GCSE and A-Level French, Spanish and Russian preparation covering reading, writing, listening and speaking. 100% target grade record.</p>
-              <div className="tuition-price">
-                <span className="price">£49</span>
-                <span className="price-detail">per 55 min online</span>
-              </div>
-              <div className="tuition-price">
-                <span className="price">£65</span>
-                <span className="price-detail">per 55 min in-person</span>
-              </div>
               <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
           </div>
