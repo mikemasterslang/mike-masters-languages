@@ -2,6 +2,15 @@
   padding-top: 2rem;
 }
 
+@media (max-width: 768px) {
+  .course-feature.alt-bg .course-feature-visual {
+    order: 2;
+  }
+  .course-feature.alt-bg .course-feature-content {
+    order: 1;
+  }
+}
+
 .gs-video-section {
   padding-top: 0;
   padding-bottom: 0;
