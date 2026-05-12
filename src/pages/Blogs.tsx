@@ -26,13 +26,6 @@ const posts = [
     date: 'May 2026',
   },
   {
-    slug: '/blogs/beginner-spanish-mistakes',
-    title: '8 Common Spanish Mistakes Beginners Make (And How to Fix Them)',
-    excerpt: 'From false cognates to the gustar structure — these are the errors native speakers notice immediately, and the easiest ones to fix once you know about them.',
-    tag: 'Tips',
-    date: 'May 2026',
-  },
-  {
     slug: '/blogs/por-vs-para',
     title: 'Por vs Para: The Complete Guide for Spanish Beginners',
     excerpt: 'Both translate as "for" in English — but they are used in completely different situations. Here\'s a clear breakdown of every main use of por and para.',
@@ -61,13 +54,6 @@ const posts = [
     date: 'May 2026',
   },
   {
-    slug: '/blogs/false-cognates',
-    title: 'Spanish False Cognates: 40+ Words That Fool English Speakers Every Time',
-    excerpt: 'Spanish and English share thousands of similar-looking words. Most mean the same thing — but the ones that don\'t can lead to some very memorable misunderstandings.',
-    tag: 'Vocabulary',
-    date: 'May 2026',
-  },
-  {
     slug: '/blogs/question-formation',
     title: 'How to Ask Questions in Spanish: Question Words, Word Order and Accent Rules',
     excerpt: 'Asking questions in Spanish is different to English in several important ways. Learn the question words, word order rules, and the qué vs cuál distinction.',
@@ -82,20 +68,6 @@ const posts = [
     date: 'May 2026',
   },
   {
-    slug: '/blogs/gustar-and-similar-verbs',
-    title: 'How to Use Gustar (and Verbs Like It) in Spanish',
-    excerpt: '"Me gusta" is one of the first phrases you learn — but most beginners don\'t understand why it works the way it does. Here\'s the full picture.',
-    tag: 'Grammar',
-    date: 'May 2026',
-  },
-  {
-    slug: '/blogs/spanish-accent-marks',
-    title: 'Spanish Accent Marks: When to Use Them and Why They Matter',
-    excerpt: 'Accent marks in Spanish aren\'t optional decoration — they change pronunciation, meaning, and grammar. The rules every beginner needs to know.',
-    tag: 'Pronunciation',
-    date: 'May 2026',
-  },
-  {
     slug: '/blogs/si-clauses-conditionals',
     title: 'Spanish Si Clauses and Conditionals: Real, Hypothetical and Impossible',
     excerpt: '"If I had more time, I would..." — conditional sentences are everywhere in everyday language. Here\'s how the three types of si clauses work in Spanish.',
@@ -107,20 +79,6 @@ const posts = [
     title: 'Spanish Adjective Agreement: Gender, Number and Word Order',
     excerpt: 'In Spanish, adjectives must match the noun they describe in gender and number — and they usually go after the noun. Here\'s the full guide to getting it right.',
     tag: 'Grammar',
-    date: 'May 2026',
-  },
-  {
-    slug: '/blogs/spanish-articles',
-    title: 'Spanish Articles: El, La, Un, Una — and When to Drop Them',
-    excerpt: 'Spanish articles change depending on gender and number — and sometimes they disappear entirely. Here\'s how definite and indefinite articles work in Spanish.',
-    tag: 'Grammar',
-    date: 'May 2026',
-  },
-  {
-    slug: '/blogs/tener-expressions',
-    title: 'Tener Expressions in Spanish: Hunger, Fear, Age and More',
-    excerpt: 'Spanish says "I have hunger" where English says "I am hungry." Learn the most important tener expressions and how to use them correctly.',
-    tag: 'Vocabulary',
     date: 'May 2026',
   },
   {
@@ -166,20 +124,6 @@ const posts = [
     date: 'May 2026',
   },
   {
-    slug: '/blogs/spanish-pronunciation',
-    title: 'Spanish Pronunciation Guide for English Speakers',
-    excerpt: 'Spanish is one of the most phonetically consistent languages in the world. Learn the rules once, and you can read virtually anything aloud correctly.',
-    tag: 'Pronunciation',
-    date: 'May 2026',
-  },
-  {
-    slug: '/blogs/telling-time-and-dates',
-    title: 'Telling the Time and Dates in Spanish',
-    excerpt: 'Time and dates come up in every conversation. Here\'s everything you need — hours, minutes, days, months and dates — with the key rule that trips beginners up.',
-    tag: 'Vocabulary',
-    date: 'May 2026',
-  },
-  {
     slug: '/blogs/negation',
     title: 'Spanish Negation: No, Nunca, Nada, Nadie and Double Negatives',
     excerpt: 'Saying no in Spanish starts simply — but Spanish requires double negatives in a way English doesn\'t. Here\'s the full guide to Spanish negation.',
@@ -191,13 +135,6 @@ const posts = [
     title: 'Spanish Prepositions: A, En, De, Con, Sin, Para and More',
     excerpt: 'Prepositions are small words that cause big problems. This guide explains the most common Spanish prepositions and where beginners tend to go wrong.',
     tag: 'Grammar',
-    date: 'May 2026',
-  },
-  {
-    slug: '/blogs/cognate-patterns',
-    title: 'Spanish Cognate Patterns: How to Unlock Thousands of Words at Once',
-    excerpt: 'English and Spanish share systematic word-ending patterns. Learn -tion→-ción, -ty→-dad, -ly→-mente and more — and gain thousands of Spanish words instantly.',
-    tag: 'Vocabulary',
     date: 'May 2026',
   },
   {
@@ -222,17 +159,59 @@ const posts = [
     date: 'May 2026',
   },
   {
-    slug: '/blogs/expressing-opinions',
-    title: 'How to Express Opinions in Spanish',
-    excerpt: 'Sharing opinions is at the heart of real conversation. Learn the key phrases for agreeing, disagreeing, and giving your view — including the subjunctive rule for no creo que.',
-    tag: 'Vocabulary',
-    date: 'May 2026',
-  },
-  {
     slug: '/blogs/passive-voice-and-se',
     title: 'The Passive Voice and "Se" Constructions in Spanish',
     excerpt: 'Spanish has two ways to express the passive — and the se construction is far more common in everyday speech. This guide explains both clearly.',
     tag: 'Grammar',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/relative-clauses',
+    title: 'Spanish Relative Clauses: Que, Quien, Lo Que and El Que',
+    excerpt: '"The book that I\'m reading", "the person who called" — relative clauses let you build more complex sentences. Here\'s how they work in Spanish.',
+    tag: 'Grammar',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/false-cognates',
+    title: 'Spanish False Cognates: 40+ Words That Fool English Speakers Every Time',
+    excerpt: 'Spanish and English share thousands of similar-looking words. Most mean the same thing — but the ones that don\'t can lead to some very memorable misunderstandings.',
+    tag: 'Vocabulary',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/tener-expressions',
+    title: 'Tener Expressions in Spanish: Hunger, Fear, Age and More',
+    excerpt: 'Spanish says "I have hunger" where English says "I am hungry." Learn the most important tener expressions and how to use them correctly.',
+    tag: 'Vocabulary',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/gustar-and-similar-verbs',
+    title: 'How to Use Gustar (and Verbs Like It) in Spanish',
+    excerpt: '"Me gusta" is one of the first phrases you learn — but most beginners don\'t understand why it works the way it does. Here\'s the full picture.',
+    tag: 'Vocabulary',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/telling-time-and-dates',
+    title: 'Telling the Time and Dates in Spanish',
+    excerpt: 'Time and dates come up in every conversation. Here\'s everything you need — hours, minutes, days, months and dates — with the key rule that trips beginners up.',
+    tag: 'Vocabulary',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/cognate-patterns',
+    title: 'Spanish Cognate Patterns: How to Unlock Thousands of Words at Once',
+    excerpt: 'English and Spanish share systematic word-ending patterns. Learn -tion→-ción, -ty→-dad, -ly→-mente and more — and gain thousands of Spanish words instantly.',
+    tag: 'Vocabulary',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/expressing-opinions',
+    title: 'How to Express Opinions in Spanish',
+    excerpt: 'Sharing opinions is at the heart of real conversation. Learn the key phrases for agreeing, disagreeing, and giving your view — including the subjunctive rule for no creo que.',
+    tag: 'Vocabulary',
     date: 'May 2026',
   },
   {
@@ -250,24 +229,10 @@ const posts = [
     date: 'May 2026',
   },
   {
-    slug: '/blogs/relative-clauses',
-    title: 'Spanish Relative Clauses: Que, Quien, Lo Que and El Que',
-    excerpt: '"The book that I\'m reading", "the person who called" — relative clauses let you build more complex sentences. Here\'s how they work in Spanish.',
-    tag: 'Grammar',
-    date: 'May 2026',
-  },
-  {
     slug: '/blogs/spanish-greetings',
     title: 'Spanish Greetings and Register: Formal vs Informal',
     excerpt: 'Spanish greetings go far beyond "hola". This guide covers formal and informal greetings, regional variations, farewells, and how to get the register right.',
     tag: 'Vocabulary',
-    date: 'May 2026',
-  },
-  {
-    slug: '/blogs/restart-spanish',
-    title: 'How to Restart Spanish After a Long Break',
-    excerpt: 'Studied Spanish years ago but haven\'t used it since? You\'re not starting from zero. Here\'s what\'s still there, what fades, and the fastest path back to confidence.',
-    tag: 'Tips',
     date: 'May 2026',
   },
   {
@@ -277,6 +242,41 @@ const posts = [
     tag: 'Vocabulary',
     date: 'May 2026',
   },
+  {
+    slug: '/blogs/spanish-pronunciation',
+    title: 'Spanish Pronunciation Guide for English Speakers',
+    excerpt: 'Spanish is one of the most phonetically consistent languages in the world. Learn the rules once, and you can read virtually anything aloud correctly.',
+    tag: 'Pronunciation',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/spanish-accent-marks',
+    title: 'Spanish Accent Marks: When to Use Them and Why They Matter',
+    excerpt: 'Accent marks in Spanish aren\'t optional decoration — they change pronunciation, meaning, and grammar. The rules every beginner needs to know.',
+    tag: 'Pronunciation',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/beginner-spanish-mistakes',
+    title: '8 Common Spanish Mistakes Beginners Make (And How to Fix Them)',
+    excerpt: 'From false cognates to the gustar structure — these are the errors native speakers notice immediately, and the easiest ones to fix once you know about them.',
+    tag: 'Tips',
+    date: 'May 2026',
+  },
+  {
+    slug: '/blogs/restart-spanish',
+    title: 'How to Restart Spanish After a Long Break',
+    excerpt: 'Studied Spanish years ago but haven\'t used it since? You\'re not starting from zero. Here\'s what\'s still there, what fades, and the fastest path back to confidence.',
+    tag: 'Tips',
+    date: 'May 2026',
+  },
+];
+
+const categories = [
+  { id: 'grammar', label: 'Grammar', tag: 'Grammar' },
+  { id: 'vocabulary', label: 'Vocabulary', tag: 'Vocabulary' },
+  { id: 'pronunciation', label: 'Pronunciation', tag: 'Pronunciation' },
+  { id: 'tips', label: 'Tips & Strategy', tag: 'Tips' },
 ];
 
 export default function Blogs() {
@@ -298,25 +298,53 @@ export default function Blogs() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingBottom: '1rem' }}>
         <div className="container">
-          <div className="blogs-grid">
-            {posts.map((post) => (
-              <Link to={post.slug} key={post.slug} className="blog-card card fade-in" style={{ textDecoration: 'none' }}>
-                <div className="blog-card-body">
-                  <span className="blog-tag">{post.tag}</span>
-                  <h2 className="blog-title">{post.title}</h2>
-                  <p className="blog-excerpt">{post.excerpt}</p>
-                </div>
-                <div className="blog-card-footer">
-                  <span className="blog-date">{post.date}</span>
-                  <span className="blog-read-more">Read more →</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <nav className="blogs-toc fade-in">
+            <p className="blogs-toc-label">Jump to section:</p>
+            <div className="blogs-toc-links">
+              {categories.map((cat) => {
+                const count = posts.filter(p => p.tag === cat.tag).length;
+                return (
+                  <a key={cat.id} href={`#${cat.id}`} className="blogs-toc-link">
+                    {cat.label}
+                    <span className="blogs-toc-count">{count}</span>
+                  </a>
+                );
+              })}
+            </div>
+          </nav>
         </div>
       </section>
+
+      {categories.map((cat) => {
+        const catPosts = posts.filter(p => p.tag === cat.tag);
+        return (
+          <section key={cat.id} id={cat.id} className="section blogs-category-section">
+            <div className="container">
+              <div className="blogs-category-header fade-in">
+                <h2 className="blogs-category-title">{cat.label}</h2>
+                <span className="blogs-category-count">{catPosts.length} {catPosts.length === 1 ? 'post' : 'posts'}</span>
+              </div>
+              <div className="blogs-grid">
+                {catPosts.map((post) => (
+                  <Link to={post.slug} key={post.slug} className="blog-card card fade-in" style={{ textDecoration: 'none' }}>
+                    <div className="blog-card-body">
+                      <span className="blog-tag">{post.tag}</span>
+                      <h2 className="blog-title">{post.title}</h2>
+                      <p className="blog-excerpt">{post.excerpt}</p>
+                    </div>
+                    <div className="blog-card-footer">
+                      <span className="blog-date">{post.date}</span>
+                      <span className="blog-read-more">Read more →</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })}
     </main>
   );
 }
