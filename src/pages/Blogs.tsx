@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -286,6 +287,14 @@ export default function Blogs() {
     'Language learning tips, grammar guides and practical advice for beginner Spanish learners. Written by professional language tutor Mike Masters.'
   );
 
+  const [openCategories, setOpenCategories] = useState<string[]>([]);
+
+  const toggleCategory = (id: string) => {
+    setOpenCategories(prev =>
+      prev.includes(id) ? prev.filter(c => c !== id) : [...prev, id]
+    );
+  };
+
   return (
     <main className="blogs-page">
       <section className="page-hero">
@@ -301,18 +310,39 @@ export default function Blogs() {
       <section className="section" style={{ paddingBottom: '1rem' }}>
         <div className="container">
           <nav className="blogs-toc fade-in">
-            <p className="blogs-toc-label">Jump to section:</p>
-            <div className="blogs-toc-links">
-              {categories.map((cat) => {
-                const count = posts.filter(p => p.tag === cat.tag).length;
-                return (
-                  <a key={cat.id} href={`#${cat.id}`} className="blogs-toc-link">
-                    {cat.label}
-                    <span className="blogs-toc-count">{count}</span>
-                  </a>
-                );
-              })}
-            </div>
+            <p className="blogs-toc-label">Contents</p>
+            {categories.map((cat) => {
+              const catPosts = posts.filter(p => p.tag === cat.tag);
+              const isOpen = openCategories.includes(cat.id);
+              return (
+                <div key={cat.id} className="blogs-toc-category">
+                  <button
+                    className="blogs-toc-heading"
+                    onClick={() => toggleCategory(cat.id)}
+                    aria-expanded={isOpen}
+                  >
+                    <span>{cat.label} <span className="blogs-toc-cat-count">({catPosts.length})</span></span>
+                    <svg
+                      className={`blogs-toc-chevron${isOpen ? ' open' : ''}`}
+                      width="16" height="16" viewBox="0 0 24 24"
+                      fill="none" stroke="currentColor" strokeWidth="2.5"
+                      strokeLinecap="round" strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  {isOpen && (
+                    <ul className="blogs-toc-list">
+                      {catPosts.map(post => (
+                        <li key={post.slug}>
+                          <Link to={post.slug} className="blogs-toc-post-link">{post.title}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
           </nav>
         </div>
       </section>

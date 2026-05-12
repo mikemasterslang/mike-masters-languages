@@ -65,62 +65,83 @@
 }
 
 .blogs-toc {
-  background: var(--card-bg);
-  border-radius: 1rem;
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  max-width: 680px;
 }
 
 .blogs-toc-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--card-text-muted);
-  margin: 0;
-  white-space: nowrap;
-}
-
-.blogs-toc-links {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.blogs-toc-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 1rem;
-  border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--card-text);
-  font-size: 0.88rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.blogs-toc-link:hover {
-  background: var(--primary);
-  color: #fff;
-}
-
-.blogs-toc-count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.4rem;
-  height: 1.4rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem 0;
 }
 
-.blogs-toc-link:hover .blogs-toc-count {
-  background: rgba(255, 255, 255, 0.3);
+.blogs-toc-category {
+  border-top: 1px solid var(--border);
+}
+
+.blogs-toc-category:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.blogs-toc-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0.9rem 0;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  gap: 1rem;
+  transition: color 0.2s ease;
+}
+
+.blogs-toc-heading:hover {
+  color: var(--primary);
+}
+
+.blogs-toc-cat-count {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.blogs-toc-chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.blogs-toc-chevron.open {
+  transform: rotate(180deg);
+}
+
+.blogs-toc-list {
+  list-style: none;
+  padding: 0 0 1rem 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blogs-toc-post-link {
+  font-size: 0.95rem;
+  color: var(--primary);
+  text-decoration: none;
+  line-height: 1.4;
+  transition: opacity 0.15s ease;
+}
+
+.blogs-toc-post-link:hover {
+  opacity: 0.75;
+  text-decoration: underline;
 }
 
 .blogs-category-section {
@@ -156,12 +177,5 @@
 @media (max-width: 640px) {
   .blogs-grid {
     grid-template-columns: 1fr;
-  }
-
-  .blogs-toc {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.25rem 1.5rem;
   }
 }
