@@ -352,13 +352,13 @@ export default function Blogs() {
         return (
           <section key={cat.id} id={cat.id} className="section blogs-category-section">
             <div className="container">
-              <div className="blogs-category-header fade-in">
+              <div className="blogs-category-header">
                 <h2 className="blogs-category-title">{cat.label}</h2>
                 <span className="blogs-category-count">{catPosts.length} {catPosts.length === 1 ? 'post' : 'posts'}</span>
               </div>
               <div className="blogs-grid">
                 {catPosts.map((post) => (
-                  <Link to={post.slug} key={post.slug} className="blog-card card fade-in" style={{ textDecoration: 'none' }}>
+                  <Link to={post.slug} key={post.slug} className="blog-card card" style={{ textDecoration: 'none' }}>
                     <div className="blog-card-body">
                       <span className="blog-tag">{post.tag}</span>
                       <h2 className="blog-title">{post.title}</h2>
