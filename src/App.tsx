@@ -46,6 +46,43 @@ import BlogRelativeClauses from './pages/BlogRelativeClauses';
 import BlogGreetings from './pages/BlogGreetings';
 import BlogFalseBeginners from './pages/BlogFalseBeginners';
 import BlogFillerWords from './pages/BlogFillerWords';
+import BlogConditional from './pages/BlogConditional';
+import BlogPeroVsSino from './pages/BlogPeroVsSino';
+import BlogDiminutives from './pages/BlogDiminutives';
+import BlogSaberVsConocer from './pages/BlogSaberVsConocer';
+import BlogPluperfect from './pages/BlogPluperfect';
+import BlogIrregularVerbs from './pages/BlogIrregularVerbs';
+import BlogBodyParts from './pages/BlogBodyParts';
+import BlogFoodDrink from './pages/BlogFoodDrink';
+import BlogTravelVocab from './pages/BlogTravelVocab';
+import BlogFamilyVocab from './pages/BlogFamilyVocab';
+import BlogEmotions from './pages/BlogEmotions';
+import BlogColours from './pages/BlogColours';
+import BlogDaysMonths from './pages/BlogDaysMonths';
+import BlogClothes from './pages/BlogClothes';
+import BlogHomeVocab from './pages/BlogHomeVocab';
+import BlogMeetingPeople from './pages/BlogMeetingPeople';
+import BlogRAndRR from './pages/BlogRAndRR';
+import BlogVowelSounds from './pages/BlogVowelSounds';
+import BlogBVsV from './pages/BlogBVsV';
+import BlogCAndZ from './pages/BlogCAndZ';
+import BlogHAndJ from './pages/BlogHAndJ';
+import BlogStressRules from './pages/BlogStressRules';
+import BlogLinkingWords from './pages/BlogLinkingWords';
+import BlogRegionalAccents from './pages/BlogRegionalAccents';
+import BlogDailyPractice from './pages/BlogDailyPractice';
+import BlogBestApps from './pages/BlogBestApps';
+import BlogLanguageExchange from './pages/BlogLanguageExchange';
+import BlogSpanishMedia from './pages/BlogSpanishMedia';
+import BlogVocabFast from './pages/BlogVocabFast';
+import BlogStopTranslating from './pages/BlogStopTranslating';
+import BlogPlateau from './pages/BlogPlateau';
+import BlogHomeImmersion from './pages/BlogHomeImmersion';
+import BlogTripPrep from './pages/BlogTripPrep';
+import BlogLearningGoals from './pages/BlogLearningGoals';
+import BlogMotivation from './pages/BlogMotivation';
+import BlogA1ToA2 from './pages/BlogA1ToA2';
+import BlogSpeakSooner from './pages/BlogSpeakSooner';
 
 export default function App() {
   return (
@@ -96,6 +133,43 @@ export default function App() {
           <Route path="/blogs/spanish-greetings" element={<BlogGreetings />} />
           <Route path="/blogs/restart-spanish" element={<BlogFalseBeginners />} />
           <Route path="/blogs/filler-words-and-connectors" element={<BlogFillerWords />} />
+          <Route path="/blogs/conditional-tense" element={<BlogConditional />} />
+          <Route path="/blogs/pero-vs-sino" element={<BlogPeroVsSino />} />
+          <Route path="/blogs/diminutives" element={<BlogDiminutives />} />
+          <Route path="/blogs/saber-vs-conocer" element={<BlogSaberVsConocer />} />
+          <Route path="/blogs/pluperfect-tense" element={<BlogPluperfect />} />
+          <Route path="/blogs/irregular-verbs" element={<BlogIrregularVerbs />} />
+          <Route path="/blogs/body-parts" element={<BlogBodyParts />} />
+          <Route path="/blogs/food-and-drink" element={<BlogFoodDrink />} />
+          <Route path="/blogs/travel-vocabulary" element={<BlogTravelVocab />} />
+          <Route path="/blogs/family-vocabulary" element={<BlogFamilyVocab />} />
+          <Route path="/blogs/expressing-emotions" element={<BlogEmotions />} />
+          <Route path="/blogs/colours-in-spanish" element={<BlogColours />} />
+          <Route path="/blogs/days-months-seasons" element={<BlogDaysMonths />} />
+          <Route path="/blogs/clothes-and-shopping" element={<BlogClothes />} />
+          <Route path="/blogs/home-vocabulary" element={<BlogHomeVocab />} />
+          <Route path="/blogs/meeting-people-phrases" element={<BlogMeetingPeople />} />
+          <Route path="/blogs/r-and-rr-sounds" element={<BlogRAndRR />} />
+          <Route path="/blogs/spanish-vowel-sounds" element={<BlogVowelSounds />} />
+          <Route path="/blogs/b-and-v-sounds" element={<BlogBVsV />} />
+          <Route path="/blogs/c-and-z-sounds" element={<BlogCAndZ />} />
+          <Route path="/blogs/h-and-j-sounds" element={<BlogHAndJ />} />
+          <Route path="/blogs/stress-and-intonation" element={<BlogStressRules />} />
+          <Route path="/blogs/linking-in-speech" element={<BlogLinkingWords />} />
+          <Route path="/blogs/regional-accents" element={<BlogRegionalAccents />} />
+          <Route path="/blogs/daily-spanish-practice" element={<BlogDailyPractice />} />
+          <Route path="/blogs/best-apps-for-spanish" element={<BlogBestApps />} />
+          <Route path="/blogs/language-exchange" element={<BlogLanguageExchange />} />
+          <Route path="/blogs/spanish-tv-films-podcasts" element={<BlogSpanishMedia />} />
+          <Route path="/blogs/build-vocabulary-fast" element={<BlogVocabFast />} />
+          <Route path="/blogs/stop-translating-in-your-head" element={<BlogStopTranslating />} />
+          <Route path="/blogs/overcome-language-plateau" element={<BlogPlateau />} />
+          <Route path="/blogs/home-immersion-spanish" element={<BlogHomeImmersion />} />
+          <Route path="/blogs/prepare-spanish-for-travel" element={<BlogTripPrep />} />
+          <Route path="/blogs/spanish-learning-goals" element={<BlogLearningGoals />} />
+          <Route path="/blogs/stay-motivated-learning-spanish" element={<BlogMotivation />} />
+          <Route path="/blogs/a1-to-a2-spanish" element={<BlogA1ToA2 />} />
+          <Route path="/blogs/start-speaking-spanish-sooner" element={<BlogSpeakSooner />} />
         </Routes>
         <Footer />
         <ScrollToTop />
