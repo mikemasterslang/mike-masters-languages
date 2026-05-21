@@ -1,4 +1,4 @@
-import { useState, useEffect, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -23,10 +23,6 @@ export default function GetStarted() {
     'Get Started | Mike Masters Languages',
     'Apply for Spanish, French or Russian lessons with Mike Masters Languages. Tell us about your goals and we\'ll find the right programme for you.'
   );
-
-  useEffect(() => {
-    if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
-  }, []);
 
   const [step, setStep] = useState(1);
   const [age, setAge] = useState<AgeRange>('');
@@ -75,6 +71,7 @@ export default function GetStarted() {
         EMAILJS_PUBLIC_KEY,
       );
       setSubmitted(true);
+      if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
     } catch {
       setSendError('Something went wrong. Please try emailing michael.s.andrews@outlook.com directly.');
     } finally {
