@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -23,6 +23,10 @@ export default function GetStarted() {
     'Get Started | Mike Masters Languages',
     'Apply for Spanish, French or Russian lessons with Mike Masters Languages. Tell us about your goals and we\'ll find the right programme for you.'
   );
+
+  useEffect(() => {
+    if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+  }, []);
 
   const [step, setStep] = useState(1);
   const [age, setAge] = useState<AgeRange>('');
