@@ -7,6 +7,7 @@ import './Contact.css';
 interface FormData {
   name: string;
   email: string;
+  phone: string;
   language: string;
   level: string;
   message: string;
@@ -15,6 +16,7 @@ interface FormData {
 interface FormErrors {
   name?: string;
   email?: string;
+  phone?: string;
   message?: string;
 }
 
@@ -33,6 +35,7 @@ export default function Contact() {
   const [form, setForm] = useState<FormData>({
     name: '',
     email: '',
+    phone: '',
     language: '',
     level: '',
     message: '',
@@ -51,6 +54,7 @@ export default function Contact() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       errs.email = 'Please enter a valid email address';
     }
+    if (!form.phone.trim()) errs.phone = 'Please enter your phone number';
     if (!form.message.trim()) errs.message = 'Please enter a message';
     setErrors(errs);
     return Object.keys(errs).length === 0;
@@ -71,6 +75,7 @@ export default function Contact() {
           from_name: form.name,
           from_email: form.email,
           reply_to: form.email,
+          phone: form.phone,
           language: form.language || 'Not specified',
           level: form.level || 'Not specified',
           message: form.message,
@@ -122,7 +127,7 @@ export default function Contact() {
                 </div>
                 <h3>Message Sent!</h3>
                 <p>Thanks for getting in touch. I'll reply as soon as I can — usually within 24 hours.</p>
-                <button type="button" className="btn btn-primary" onClick={() => { setSubmitted(false); setSendError(''); setForm({ name: '', email: '', language: '', level: '', message: '' }); }}>
+                <button type="button" className="btn btn-primary" onClick={() => { setSubmitted(false); setSendError(''); setForm({ name: '', email: '', phone: '', language: '', level: '', message: '' }); }}>
                   Send Another Message
                 </button>
               </div>
@@ -156,6 +161,20 @@ export default function Contact() {
                     autoComplete="email"
                   />
                   {errors.email && <span className="field-error">{errors.email}</span>}
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="phone">Phone Number <span className="required">*</span></label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="e.g. +44 7700 900000"
+                    value={form.phone}
+                    onChange={(e) => handleChange('phone', e.target.value)}
+                    className={errors.phone ? 'error' : ''}
+                    autoComplete="tel"
+                  />
+                  {errors.phone && <span className="field-error">{errors.phone}</span>}
                 </div>
 
                 <div className="form-row">
