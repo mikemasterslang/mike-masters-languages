@@ -29,7 +29,7 @@ export default function GetStarted() {
   const [level, setLevel] = useState<Level>('');
   const [financial, setFinancial] = useState<Financial>('');
   const [goals, setGoals] = useState('');
-  const [form, setForm] = useState({ name: '', email: '', language: '', country: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', language: '', country: '' });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -45,6 +45,7 @@ export default function GetStarted() {
     if (!form.name.trim()) errs.name = 'Please enter your name';
     if (!form.email.trim()) errs.email = 'Please enter your email';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = 'Please enter a valid email address';
+    if (!form.phone.trim()) errs.phone = 'Please enter your phone number';
     if (!form.language) errs.language = 'Please select a language';
     if (!form.country.trim()) errs.country = 'Please enter your country';
     setErrors(errs);
@@ -66,7 +67,7 @@ export default function GetStarted() {
           reply_to: form.email,
           language: form.language,
           level: level === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
-          message: `AGE RANGE: ${age}\n\nFINANCIAL READINESS: ${financial === 'yes' ? 'Yes — ready to invest' : 'Not quite yet'}\n\nGOALS & CHALLENGES:\n${goals}\n\nCOUNTRY OF RESIDENCY: ${form.country}`,
+          message: `AGE RANGE: ${age}\n\nPHONE: ${form.phone}\n\nFINANCIAL READINESS: ${financial === 'yes' ? 'Yes — ready to invest' : 'Not quite yet'}\n\nGOALS & CHALLENGES:\n${goals}\n\nCOUNTRY OF RESIDENCY: ${form.country}`,
         },
         EMAILJS_PUBLIC_KEY,
       );
@@ -219,6 +220,11 @@ export default function GetStarted() {
                       <label htmlFor="gs-email">Email <span className="required">*</span></label>
                       <input id="gs-email" type="email" placeholder="you@example.com" value={form.email} onChange={(e) => setForm(p => ({ ...p, email: e.target.value }))} className={errors.email ? 'error' : ''} autoComplete="email" />
                       {errors.email && <span className="field-error">{errors.email}</span>}
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="gs-phone">Phone Number <span className="required">*</span></label>
+                      <input id="gs-phone" type="tel" placeholder="e.g. +44 7700 900000" value={form.phone} onChange={(e) => setForm(p => ({ ...p, phone: e.target.value }))} className={errors.phone ? 'error' : ''} autoComplete="tel" />
+                      {errors.phone && <span className="field-error">{errors.phone}</span>}
                     </div>
                     <div className="form-group">
                       <label htmlFor="gs-language">Desired Language <span className="required">*</span></label>
