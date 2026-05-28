@@ -46,6 +46,7 @@ export default function GetStarted() {
     if (!form.email.trim()) errs.email = 'Please enter your email';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = 'Please enter a valid email address';
     if (!form.phone.trim()) errs.phone = 'Please enter your phone number';
+    else if (form.phone.replace(/\D/g, '').length < 11) errs.phone = 'Please enter a valid UK phone number (at least 11 digits)';
     if (!form.language) errs.language = 'Please select a language';
     if (!form.country.trim()) errs.country = 'Please enter your country';
     setErrors(errs);
