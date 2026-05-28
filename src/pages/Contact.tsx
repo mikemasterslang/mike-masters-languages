@@ -55,7 +55,7 @@ export default function Contact() {
       errs.email = 'Please enter a valid email address';
     }
     if (!form.phone.trim()) errs.phone = 'Please enter your phone number';
-    else if (form.phone.replace(/\D/g, '').length < 11) errs.phone = 'Please enter a valid UK phone number (at least 11 digits)';
+    else if (form.phone.replace(/\D/g, '').length < 10) errs.phone = 'Please enter a valid phone number (at least 10 digits)';
     if (!form.message.trim()) errs.message = 'Please enter a message';
     setErrors(errs);
     return Object.keys(errs).length === 0;
