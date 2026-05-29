@@ -11,6 +11,7 @@ import './BookOnline.css';
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 type AgeRange = '16-17' | '18-24' | '25-34' | '35-44' | '45+' | '';
@@ -74,6 +75,12 @@ export default function GetStarted() {
       );
       setSubmitted(true);
       if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+      emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_AUTOREPLY_TEMPLATE_ID,
+        { to_name: form.name.split(' ')[0], to_email: form.email },
+        EMAILJS_PUBLIC_KEY,
+      );
     } catch {
       setSendError('Something went wrong. Please try emailing michael.s.andrews@outlook.com directly.');
     } finally {

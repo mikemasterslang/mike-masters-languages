@@ -23,6 +23,7 @@ interface FormErrors {
 // EmailJS configuration — loaded from environment variables
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
@@ -84,6 +85,12 @@ export default function Contact() {
         EMAILJS_PUBLIC_KEY,
       );
       setSubmitted(true);
+      emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_AUTOREPLY_TEMPLATE_ID,
+        { to_name: form.name.split(' ')[0], to_email: form.email },
+        EMAILJS_PUBLIC_KEY,
+      );
     } catch {
       setSendError('Something went wrong. Please try emailing michael.s.andrews@outlook.com directly.');
     } finally {
