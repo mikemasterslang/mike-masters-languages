@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -36,7 +36,22 @@ export default function GetStarted() {
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState('');
 
-  const totalSteps = 5;
+  const totalSteps = 6;
+
+  useEffect(() => {
+    if (step !== 5) return;
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    const handleCalendlyEvent = (e: MessageEvent) => {
+      if (e.data?.event === 'calendly.event_scheduled') setStep(6);
+    };
+    window.addEventListener('message', handleCalendlyEvent);
+    return () => {
+      window.removeEventListener('message', handleCalendlyEvent);
+    };
+  }, [step]);
 
   const handleNext = () => setStep(s => s + 1);
   const handleBack = () => setStep(s => s - 1);
@@ -74,13 +89,13 @@ export default function GetStarted() {
         EMAILJS_PUBLIC_KEY,
       );
       if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
-      window.location.href = 'https://calendly.com/michael-s-andrews/course-enquiries';
       emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_AUTOREPLY_TEMPLATE_ID,
         { to_name: form.name.split(' ')[0], to_email: form.email },
         EMAILJS_PUBLIC_KEY,
       );
+      setSubmitted(true);
     } catch {
       setSendError('Something went wrong. Please try emailing michael.s.andrews@outlook.com directly.');
     } finally {
@@ -125,13 +140,8 @@ export default function GetStarted() {
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
               </div>
-              <h2>Application Received!</h2>
-              <p>Thanks for applying, {form.name}. Want to book a quick chat straight away? Pick a time below and we can talk through your options.</p>
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/michael-s-andrews/course-enquiries?hide_gdpr_banner=1&hide_event_type_details=1"
-                style={{ minWidth: '320px', height: '700px', width: '100%', marginTop: '1.5rem' }}
-              />
+              <h2>You're all booked in!</h2>
+              <p>Thanks, {form.name}. Your call is confirmed and I'll look forward to speaking with you. Check your inbox for a confirmation from Calendly.</p>
             </div>
           ) : (
             <div className="gs-card card fade-in">
@@ -220,6 +230,21 @@ export default function GetStarted() {
               )}
 
               {step === 5 && (
+                <div className="gs-step">
+                  <h2>Book a chat with me</h2>
+                  <p className="gs-subtitle">Pick a time that suits you and we'll talk through your options together.</p>
+                  <div
+                    className="calendly-inline-widget"
+                    data-url="https://calendly.com/michael-s-andrews/course-enquiries?hide_gdpr_banner=1&hide_event_type_details=1"
+                    style={{ minWidth: '320px', height: '700px', width: '100%', marginTop: '0.5rem' }}
+                  />
+                  <div className="gs-nav" style={{ marginTop: '1rem' }}>
+                    <button className="btn btn-secondary" onClick={handleBack}>Back</button>
+                  </div>
+                </div>
+              )}
+
+              {step === 6 && (
                 <div className="gs-step">
                   <h2>Almost there!</h2>
                   <p className="gs-subtitle">Fill in your details and I'll be in touch within 24 hours.</p>
