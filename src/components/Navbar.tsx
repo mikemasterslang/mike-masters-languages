@@ -28,7 +28,6 @@ export default function Navbar() {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/get-started', label: 'Get Started' },
-    { to: '/contact', label: 'Contact' },
     { to: '/blogs', label: 'Blogs' },
   ];
 

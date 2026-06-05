@@ -123,7 +123,7 @@ export default function BlogFalseCognates() {
               <p>Learning the pitfalls early saves a lot of confusion later. Get in touch to find the right programme for you.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
 

@@ -137,7 +137,7 @@ export default function BlogEmotions() {
               <p>Emotions vocabulary brings conversations to life. Book a lesson and we'll practise describing feelings in real conversational contexts.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
           </div>

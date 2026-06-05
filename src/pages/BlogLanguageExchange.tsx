@@ -141,7 +141,7 @@ export default function BlogLanguageExchange() {
               <p>Regular lessons give you the grammar and vocabulary foundation that makes language exchange sessions far more productive. Get in touch to find out how I can help.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
 

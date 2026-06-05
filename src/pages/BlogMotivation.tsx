@@ -127,7 +127,7 @@ export default function BlogMotivation() {
               <p>Accountability is one of the biggest benefits of working with a tutor — you're far less likely to skip sessions than you are to skip solo study. Get in touch and let's build some momentum.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
 

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
+
 import GetStarted from './pages/GetStarted';
 import Blogs from './pages/Blogs';
 import BlogSerVsEstar from './pages/BlogSerVsEstar';
@@ -92,7 +92,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/get-started" element={<GetStarted />} />
-          <Route path="/contact" element={<Contact />} />
+
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/ser-vs-estar" element={<BlogSerVsEstar />} />
           <Route path="/blogs/spanish-noun-gender" element={<BlogNounGender />} />

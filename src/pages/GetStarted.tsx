@@ -304,7 +304,7 @@ export default function GetStarted() {
               </div>
               <h3>6 Week Conversation Class — Individual</h3>
               <p>A dedicated six-week programme focused entirely on your speaking and listening. Build conversational confidence quickly with this immersive method in your target language.</p>
-              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
+              <Link to="/get-started" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
             <div className="benefit-card card fade-in">
               <div className="benefit-icon">
@@ -312,7 +312,7 @@ export default function GetStarted() {
               </div>
               <h3>6 Week Conversation Class — Group</h3>
               <p>Learn and practise alongside friends in a small, supportive group setting. Great for building conversational confidence together in a social environment before your trip. Maximum group size six.</p>
-              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
+              <Link to="/get-started" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
             <div className="benefit-card card fade-in">
               <div className="benefit-icon">
@@ -320,7 +320,7 @@ export default function GetStarted() {
               </div>
               <h3>6 Week Pre Exam Blast</h3>
               <p>Intensive, targeted preparation in the lead-up to your GCSE or A-Level exams. Cover the key areas fast and go into your exam feeling ready. Available for Spanish and French.</p>
-              <Link to="/contact" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
+              <Link to="/get-started" className="btn btn-secondary" style={{ marginTop: '0.75rem', fontSize: '0.85rem', padding: '0.5rem 1rem' }}>Enquire Now</Link>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@ export default function GetStarted() {
               </div>
               <h3>1-1 Online Lessons</h3>
               <p>Fully personalised curriculum with flexible scheduling. All levels welcome — from complete beginner to advanced.</p>
-              <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
+              <Link to="/get-started" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
               <div className="tuition-icon">
@@ -358,7 +358,7 @@ export default function GetStarted() {
               </div>
               <h3>5 Lesson Block Booking</h3>
               <p>Commit to your learning with a block of five 1-1 online sessions at a discounted rate.</p>
-              <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
+              <Link to="/get-started" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
             <div className="tuition-card card fade-in">
               <div className="tuition-icon">
@@ -366,7 +366,7 @@ export default function GetStarted() {
               </div>
               <h3>Exam Preparation</h3>
               <p>Focused GCSE and A-Level French, Spanish and Russian preparation covering reading, writing, listening and speaking. 100% target grade record.</p>
-              <Link to="/contact" className="btn btn-primary tuition-btn">Book Now</Link>
+              <Link to="/get-started" className="btn btn-primary tuition-btn">Book Now</Link>
             </div>
           </div>
         </div>

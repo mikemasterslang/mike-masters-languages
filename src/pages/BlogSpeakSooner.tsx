@@ -132,7 +132,7 @@ export default function BlogSpeakSooner() {
               <p>My lessons are designed to get even complete beginners speaking Spanish from the first session. It's gentler than you think. Get in touch and let's get started.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
 

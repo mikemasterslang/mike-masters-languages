@@ -152,7 +152,7 @@ export default function BlogFoodDrink() {
               <p>Food and drink vocabulary is some of the most enjoyable to practise — and it matters from the moment you land. Let's make sure you're ready.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
           </div>

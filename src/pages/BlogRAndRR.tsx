@@ -124,7 +124,7 @@ export default function BlogRAndRR() {
               <p>A few targeted sessions with a tutor can transform your pronunciation faster than months of solo practice. Let's work on it together.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
 

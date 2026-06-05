@@ -156,7 +156,7 @@ export default function BlogHomeVocab() {
               <p>Home, family and daily routine — the foundations of every Spanish conversation. Let's build your vocabulary and confidence together.</p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Link to="/get-started" className="btn btn-primary btn-lg">Get Started</Link>
-                <Link to="/contact" className="btn btn-secondary btn-lg">Ask a Question</Link>
+                <Link to="/get-started" className="btn btn-secondary btn-lg">Ask a Question</Link>
               </div>
             </div>
           </div>
