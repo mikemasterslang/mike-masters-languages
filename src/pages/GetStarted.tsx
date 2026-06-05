@@ -1,6 +1,5 @@
-import { useState, useEffect, type FormEvent } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { usePageMeta } from '../hooks/usePageMeta';
 import FlagIcon from '../components/FlagIcon';
@@ -8,11 +7,6 @@ import './GetStarted.css';
 import './Spanish.css';
 import './Courses.css';
 import './BookOnline.css';
-
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 type AgeRange = '16-17' | '18-24' | '25-34' | '35-44' | '45+' | '';
 type Level = 'beginner' | 'some-experience' | '';
@@ -30,13 +24,9 @@ export default function GetStarted() {
   const [level, setLevel] = useState<Level>('');
   const [financial, setFinancial] = useState<Financial>('');
   const [goals, setGoals] = useState('');
-  const [form, setForm] = useState({ name: '', email: '', phone: '', language: '', country: '' });
-  const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [sendError, setSendError] = useState('');
 
-  const totalSteps = 6;
+  const totalSteps = 5;
 
   useEffect(() => {
     if (step !== 5) return;
@@ -45,7 +35,10 @@ export default function GetStarted() {
     script.async = true;
     document.body.appendChild(script);
     const handleCalendlyEvent = (e: MessageEvent) => {
-      if (e.data?.event === 'calendly.event_scheduled') setStep(6);
+      if (e.data?.event === 'calendly.event_scheduled') {
+        if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+        setSubmitted(true);
+      }
     };
     window.addEventListener('message', handleCalendlyEvent);
     return () => {
@@ -55,53 +48,6 @@ export default function GetStarted() {
 
   const handleNext = () => setStep(s => s + 1);
   const handleBack = () => setStep(s => s - 1);
-
-  const validateDetails = () => {
-    const errs: Record<string, string> = {};
-    if (!form.name.trim()) errs.name = 'Please enter your name';
-    if (!form.email.trim()) errs.email = 'Please enter your email';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = 'Please enter a valid email address';
-    if (!form.phone.trim()) errs.phone = 'Please enter your phone number';
-    else if (form.phone.replace(/\D/g, '').length < 11) errs.phone = 'Please enter a valid UK phone number (at least 11 digits)';
-    if (!form.language) errs.language = 'Please select a language';
-    if (!form.country.trim()) errs.country = 'Please enter your country';
-    setErrors(errs);
-    return Object.keys(errs).length === 0;
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!validateDetails()) return;
-    setSending(true);
-    setSendError('');
-    try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          reply_to: form.email,
-          language: form.language,
-          level: level === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
-          message: `AGE RANGE: ${age}\n\nPHONE: ${form.phone}\n\nFINANCIAL READINESS: ${financial === 'yes' ? 'Yes — ready to invest' : 'Not quite yet'}\n\nGOALS & CHALLENGES:\n${goals}\n\nCOUNTRY OF RESIDENCY: ${form.country}`,
-        },
-        EMAILJS_PUBLIC_KEY,
-      );
-      if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
-      emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_AUTOREPLY_TEMPLATE_ID,
-        { to_name: form.name.split(' ')[0], to_email: form.email },
-        EMAILJS_PUBLIC_KEY,
-      );
-      setSubmitted(true);
-    } catch {
-      setSendError('Something went wrong. Please try emailing michael.s.andrews@outlook.com directly.');
-    } finally {
-      setSending(false);
-    }
-  };
 
   return (
     <main className="get-started-page">
@@ -244,57 +190,6 @@ export default function GetStarted() {
                 </div>
               )}
 
-              {step === 6 && (
-                <div className="gs-step">
-                  <h2>Almost there!</h2>
-                  <p className="gs-subtitle">Fill in your details and I'll be in touch within 24 hours.</p>
-                  <form onSubmit={handleSubmit} noValidate className="gs-details-form">
-                    <div className="form-group">
-                      <label htmlFor="gs-name">Name <span className="required">*</span></label>
-                      <input id="gs-name" type="text" placeholder="Your full name" value={form.name} onChange={(e) => setForm(p => ({ ...p, name: e.target.value }))} className={errors.name ? 'error' : ''} autoComplete="name" />
-                      {errors.name && <span className="field-error">{errors.name}</span>}
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="gs-email">Email <span className="required">*</span></label>
-                      <input id="gs-email" type="email" placeholder="you@example.com" value={form.email} onChange={(e) => setForm(p => ({ ...p, email: e.target.value }))} className={errors.email ? 'error' : ''} autoComplete="email" />
-                      {errors.email && <span className="field-error">{errors.email}</span>}
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="gs-phone">Phone Number <span className="required">*</span></label>
-                      <input id="gs-phone" type="tel" placeholder="e.g. +44 7700 900000" value={form.phone} onChange={(e) => setForm(p => ({ ...p, phone: e.target.value }))} className={errors.phone ? 'error' : ''} autoComplete="tel" />
-                      {errors.phone && <span className="field-error">{errors.phone}</span>}
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="gs-language">Desired Language <span className="required">*</span></label>
-                      <select id="gs-language" value={form.language} onChange={(e) => setForm(p => ({ ...p, language: e.target.value }))} className={errors.language ? 'error' : ''}>
-                        <option value="">Select a language</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="French">French</option>
-                        <option value="Russian">Russian</option>
-                      </select>
-                      {errors.language && <span className="field-error">{errors.language}</span>}
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="gs-country">Country of Residency <span className="required">*</span></label>
-                      <input id="gs-country" type="text" placeholder="e.g. United Kingdom" value={form.country} onChange={(e) => setForm(p => ({ ...p, country: e.target.value }))} className={errors.country ? 'error' : ''} autoComplete="country-name" />
-                      {errors.country && <span className="field-error">{errors.country}</span>}
-                    </div>
-                    {sendError && <p className="send-error">{sendError}</p>}
-                    <div className="gs-nav">
-                      <button type="button" className="btn btn-secondary" onClick={handleBack}>Back</button>
-                      <button type="submit" className="btn btn-primary btn-lg" disabled={sending}>
-                        {sending ? 'Sending...' : 'Submit Application'}
-                        {!sending && (
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="22" y1="2" x2="11" y2="13"/>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                          </svg>
-                        )}
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              )}
             </div>
           )}
         </div>
