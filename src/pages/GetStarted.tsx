@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -24,6 +24,15 @@ export default function GetStarted() {
     'Get Started | Mike Masters Languages',
     'Apply for Spanish, French or Russian lessons with Mike Masters Languages. Tell us about your goals and we\'ll find the right programme for you.'
   );
+
+  useEffect(() => {
+    if (!submitted) return;
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, [submitted]);
 
   const [step, setStep] = useState(1);
   const [age, setAge] = useState<AgeRange>('');
@@ -126,7 +135,12 @@ export default function GetStarted() {
                 </svg>
               </div>
               <h2>Application Received!</h2>
-              <p>Thanks for applying, {form.name}. I'll review your answers and get back to you within 24 hours with my recommendation.</p>
+              <p>Thanks for applying, {form.name}. Want to book a quick chat straight away? Pick a time below and we can talk through your options.</p>
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/michael-s-andrews/course-enquiries?hide_gdpr_banner=1&hide_event_type_details=1"
+                style={{ minWidth: '320px', height: '700px', width: '100%', marginTop: '1.5rem' }}
+              />
             </div>
           ) : (
             <div className="gs-card card fade-in">
