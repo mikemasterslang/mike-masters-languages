@@ -47,8 +47,8 @@ const reviews = [
 export default function Home() {
   useScrollAnimation();
   usePageMeta(
-    'Mike Masters Languages — Online Spanish, French & Russian Tutoring',
-    'Expert online language tutoring in Spanish, French and Russian. 1-to-1 lessons, GCSE & A-Level exam prep, and confidence-first Spanish courses. 100% target grade record.'
+    'Online Spanish Tutor | French & Russian Lessons | Mike Masters Languages',
+    'Mike Masters is an online language tutor specialising in Spanish, French and Russian. 1-to-1 online lessons, GCSE & A-Level language exam prep, and confidence-first Spanish courses for adults. 100% target grade record.'
   );
 
   const [currentReview, setCurrentReview] = useState(0);
@@ -80,9 +80,9 @@ export default function Home() {
             Through <span className="gradient-text">Language</span>
           </h1>
           <p className="hero-subtitle fade-in">
-            Expert tutoring in Spanish, French &amp; Russian for all levels.
-            Whether you're preparing for exams, planning travels, or pursuing a passion —
-            let's make language learning an adventure.
+            Online language tutor specialising in Spanish, French &amp; Russian.
+            Whether you're preparing for exams, planning a trip to Spain, or learning for passion —
+            expert 1-to-1 online lessons tailored to you.
           </p>
           <div className="hero-actions fade-in">
             <Link to="/get-started" className="btn btn-primary btn-lg">
@@ -180,7 +180,7 @@ export default function Home() {
               Passionate About <span className="gradient-text">Languages</span>
             </h2>
             <p>
-              Having studied Spanish and French at school and A-levels, I decided to expand my language learning to Russian when I started at the University of Nottingham where I graduated with a degree in all three languages.
+              I'm Mike Andrews — an online language tutor specialising in Spanish, French and Russian. Having studied all three at school, A-Level and then at the University of Nottingham, where I graduated with a degree in Spanish, French and Russian, languages have been at the heart of everything I do.
             </p>
             <p>
               Although my background in languages was mainly developed in education, I always found using my languages the most rewarding and enjoyable part of the process. My approach to teaching languages, which is represented in my courses and tutoring, is to help you develop confidence in your abilities so that you can make the most of any travel plans, relationships that are built along the way and foreign cultures!
@@ -203,7 +203,7 @@ export default function Home() {
             What I <span className="gradient-text">Offer</span>
           </h2>
           <p className="section-subtitle fade-in">
-            Flexible learning options designed around your schedule, goals and preferred style.
+            Online Spanish, French and Russian tuition — flexible options designed around your schedule, goals and preferred style.
           </p>
           <div className="services-grid">
             <div className="service-card card fade-in">
