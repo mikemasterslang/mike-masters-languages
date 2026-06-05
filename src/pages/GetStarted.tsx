@@ -140,8 +140,8 @@ export default function GetStarted() {
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
               </div>
-              <h2>You're all booked in!</h2>
-              <p>Thanks, {form.name}. Your call is confirmed and I'll look forward to speaking with you. Check your inbox for a confirmation from Calendly.</p>
+              <h2>Thank You!</h2>
+              <p>Your submission has been completed. I look forward to having a chat with you — but if you have any questions in the meantime, please feel free to reach out!</p>
             </div>
           ) : (
             <div className="gs-card card fade-in">
