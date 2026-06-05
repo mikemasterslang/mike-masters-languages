@@ -79,7 +79,7 @@ export default function GetStarted() {
       <section className="section gs-section">
         <div className="container">
           {submitted ? (
-            <div className="gs-success card fade-in">
+            <div className="gs-success card">
               <div className="gs-success-icon">
                 <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
