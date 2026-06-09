@@ -220,6 +220,15 @@ export default function GetStarted() {
                   Arrive in Spain feeling prepared, capable, and ready to belong instead of anxious and silent.
                 </p>
               </div>
+              <a
+                href="https://buy.stripe.com/fZu8wOeTadXvf4H1DV9IQ02"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-lg"
+                style={{ marginTop: '1.5rem', display: 'inline-flex' }}
+              >
+                Buy Now
+              </a>
             </div>
             <div className="course-feature-visual fade-in-right">
               <div className="course-visual-card">
