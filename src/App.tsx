@@ -83,6 +83,37 @@ import BlogLearningGoals from './pages/BlogLearningGoals';
 import BlogMotivation from './pages/BlogMotivation';
 import BlogA1ToA2 from './pages/BlogA1ToA2';
 import BlogSpeakSooner from './pages/BlogSpeakSooner';
+import BlogPossessives from './pages/BlogPossessives';
+import BlogDemonstratives from './pages/BlogDemonstratives';
+import BlogAdverbs from './pages/BlogAdverbs';
+import BlogHaceTime from './pages/BlogHaceTime';
+import BlogPrepositionsPlace from './pages/BlogPrepositionsPlace';
+import BlogVerbIr from './pages/BlogVerbIr';
+import BlogIndirectSpeech from './pages/BlogIndirectSpeech';
+import BlogWorkVocab from './pages/BlogWorkVocab';
+import BlogSportsHobbies from './pages/BlogSportsHobbies';
+import BlogPhoneMessages from './pages/BlogPhoneMessages';
+import BlogHealthVocab from './pages/BlogHealthVocab';
+import BlogIdioms from './pages/BlogIdioms';
+import BlogNatureVocab from './pages/BlogNatureVocab';
+import BlogMoneyPhrases from './pages/BlogMoneyPhrases';
+import BlogSchoolVocab from './pages/BlogSchoolVocab';
+import BlogLLAndY from './pages/BlogLLAndY';
+import BlogNTilde from './pages/BlogNTilde';
+import BlogGSound from './pages/BlogGSound';
+import BlogDSound from './pages/BlogDSound';
+import BlogIntonation from './pages/BlogIntonation';
+import BlogSyllableDivision from './pages/BlogSyllableDivision';
+import BlogFastSpeech from './pages/BlogFastSpeech';
+import BlogPTK from './pages/BlogPTK';
+import BlogA2ToB1 from './pages/BlogA2ToB1';
+import BlogUseTutor from './pages/BlogUseTutor';
+import BlogSpacedRep from './pages/BlogSpacedRep';
+import BlogSpeakingAtHome from './pages/BlogSpeakingAtHome';
+import BlogIntermediateMistakes from './pages/BlogIntermediateMistakes';
+import BlogSelfStudy from './pages/BlogSelfStudy';
+import BlogBalancePractice from './pages/BlogBalancePractice';
+import BlogGCSETips from './pages/BlogGCSETips';
 
 export default function App() {
   return (
@@ -170,6 +201,37 @@ export default function App() {
           <Route path="/blogs/stay-motivated-learning-spanish" element={<BlogMotivation />} />
           <Route path="/blogs/a1-to-a2-spanish" element={<BlogA1ToA2 />} />
           <Route path="/blogs/start-speaking-spanish-sooner" element={<BlogSpeakSooner />} />
+          <Route path="/blogs/spanish-possessives" element={<BlogPossessives />} />
+          <Route path="/blogs/demonstratives" element={<BlogDemonstratives />} />
+          <Route path="/blogs/spanish-adverbs" element={<BlogAdverbs />} />
+          <Route path="/blogs/hace-time-expressions" element={<BlogHaceTime />} />
+          <Route path="/blogs/prepositions-of-place" element={<BlogPrepositionsPlace />} />
+          <Route path="/blogs/verb-ir" element={<BlogVerbIr />} />
+          <Route path="/blogs/indirect-speech" element={<BlogIndirectSpeech />} />
+          <Route path="/blogs/work-vocabulary" element={<BlogWorkVocab />} />
+          <Route path="/blogs/sports-hobbies-vocabulary" element={<BlogSportsHobbies />} />
+          <Route path="/blogs/phone-and-messages" element={<BlogPhoneMessages />} />
+          <Route path="/blogs/health-vocabulary" element={<BlogHealthVocab />} />
+          <Route path="/blogs/spanish-idioms" element={<BlogIdioms />} />
+          <Route path="/blogs/nature-vocabulary" element={<BlogNatureVocab />} />
+          <Route path="/blogs/money-and-shopping-phrases" element={<BlogMoneyPhrases />} />
+          <Route path="/blogs/school-vocabulary" element={<BlogSchoolVocab />} />
+          <Route path="/blogs/ll-and-y-sounds" element={<BlogLLAndY />} />
+          <Route path="/blogs/spanish-n-tilde" element={<BlogNTilde />} />
+          <Route path="/blogs/spanish-g-sound" element={<BlogGSound />} />
+          <Route path="/blogs/spanish-d-sound" element={<BlogDSound />} />
+          <Route path="/blogs/spanish-intonation" element={<BlogIntonation />} />
+          <Route path="/blogs/syllable-division" element={<BlogSyllableDivision />} />
+          <Route path="/blogs/fast-speech-spanish" element={<BlogFastSpeech />} />
+          <Route path="/blogs/spanish-p-t-k" element={<BlogPTK />} />
+          <Route path="/blogs/a2-to-b1-spanish" element={<BlogA2ToB1 />} />
+          <Route path="/blogs/how-to-use-a-tutor" element={<BlogUseTutor />} />
+          <Route path="/blogs/spaced-repetition" element={<BlogSpacedRep />} />
+          <Route path="/blogs/speaking-at-home" element={<BlogSpeakingAtHome />} />
+          <Route path="/blogs/intermediate-spanish-mistakes" element={<BlogIntermediateMistakes />} />
+          <Route path="/blogs/self-study-spanish" element={<BlogSelfStudy />} />
+          <Route path="/blogs/balance-four-skills" element={<BlogBalancePractice />} />
+          <Route path="/blogs/gcse-spanish-tips" element={<BlogGCSETips />} />
         </Routes>
         <Footer />
         <ScrollToTop />
