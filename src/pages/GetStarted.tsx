@@ -279,7 +279,7 @@ export default function GetStarted() {
                 <p>
                   Using a context-first, confidence-led method built specifically around real life, you'll work through 84 structured days covering every tense, every real-world situation and the cultural knowledge that separates tourists from people who actually belong.
                 </p>
-                <p><strong>By Day 84 you won't just have learned Spanish. You'll speak it.</strong></p>
+                <p className="course-highlight">By Day 84 you won't just have learned Spanish. You'll speak it.</p>
               </div>
             </div>
           </div>
