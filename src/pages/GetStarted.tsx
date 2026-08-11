@@ -271,23 +271,15 @@ export default function GetStarted() {
               </p>
               <div className="course-body">
                 <p>
-                  This is for anyone who wants to speak real Spanish in Spain — not just survive it. Whether you're planning a trip, going every year, or simply tired of nodding and smiling while the conversation happens around you.
+                  This is for anyone who wants to speak real Spanish on their trip — not just survive it. Whether you're planning a trip, going every year, or simply tired of nodding and smiling while the conversation happens around you.
                 </p>
                 <p>
                   You've tried apps. You've maybe tried lessons. But nothing has ever taken you far enough to feel genuinely confident — to order without panicking, tell a story, handle something going wrong, or have a proper conversation with a real Spanish person.
                 </p>
                 <p>
-                  Using a context-first, confidence-led method built specifically around life in Spain, you'll work through 84 structured days covering every tense, every real-world situation and the cultural knowledge that separates tourists from people who actually belong.
+                  Using a context-first, confidence-led method built specifically around real life, you'll work through 84 structured days covering every tense, every real-world situation and the cultural knowledge that separates tourists from people who actually belong.
                 </p>
-                <p>By Day 84 you won't just have learned Spanish. You'll speak it.</p>
-                <ul className="course-highlights-list" style={{ listStyle: 'none', padding: 0, marginTop: '0.75rem' }}>
-                  <li>A1 to B1/B2 in 90 days</li>
-                  <li>30 minutes a day</li>
-                  <li>Deeper fluency foundations</li>
-                  <li>Real Spain, not textbook Spanish</li>
-                  <li>Videos, audios and full dialogues throughout</li>
-                  <li>Speak comfortably not just survive</li>
-                </ul>
+                <p><strong>By Day 84 you won't just have learned Spanish. You'll speak it.</strong></p>
               </div>
             </div>
           </div>
