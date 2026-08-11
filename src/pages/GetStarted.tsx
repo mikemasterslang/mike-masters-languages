@@ -239,7 +239,7 @@ export default function GetStarted() {
         </div>
       </section>
 
-      {/* Beginners Spanish Travel Pack */}
+      {/* Speak Spanish Sin Miedo */}
       <section className="section course-feature alt-bg">
         <div className="container">
           <div className="course-feature-grid">
@@ -250,37 +250,43 @@ export default function GetStarted() {
                     <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
                   </svg>
                 </span>
-                <h3>Beginners Travel Pack</h3>
-                <p>Structured &amp; Guided</p>
+                <h3>Speak Spanish Sin Miedo</h3>
+                <p>Confidence-First Method</p>
                 <ul className="course-highlights-list">
-                  <li>35–50 min per day</li>
-                  <li>6 days + live weekly call</li>
-                  <li>Real travel scenarios</li>
+                  <li>A1 to B1/B2 in 90 days</li>
+                  <li>30 minutes a day</li>
                   <li>Deeper fluency foundations</li>
-                  <li>Perfect for beginners</li>
+                  <li>Real Spain, not textbook Spanish</li>
+                  <li>Videos, audios and full dialogues throughout</li>
+                  <li>Speak comfortably not just survive</li>
                 </ul>
               </div>
             </div>
             <div className="course-feature-content fade-in-right">
               <div className="hero-badge">In-Depth Programme</div>
-              <h2>Beginners Spanish Travel Pack</h2>
-              <p className="course-powered">The Complete Structured Learning Guide for Complete Beginners</p>
+              <h2>Speak Spanish Sin Miedo</h2>
+              <p className="course-powered">Powered by the Confidence-First Spanish Method</p>
               <p className="course-tagline">
-                More structure, more depth, and more speaking practice before your trip.
+                Go from complete beginner to genuine B1/B2 — in 90 days, 30 minutes a day, without ever feeling like you're back in a classroom.
               </p>
               <div className="course-body">
                 <p>
-                  The Beginners Spanish Travel Pack is designed for those who have never studied Spanish before but want more structure, more depth, and more speaking practice before their trip.
+                  This is for anyone who wants to speak real Spanish in Spain — not just survive it. Whether you're planning a trip, going every year, or simply tired of nodding and smiling while the conversation happens around you.
                 </p>
                 <p>
-                  You'll complete 35–50 minutes of focused content each day, 6 days a week. On the 6th day, we'll have a live call together where you'll actively practise what you've been working on that week.
+                  You've tried apps. You've maybe tried lessons. But nothing has ever taken you far enough to feel genuinely confident — to order without panicking, tell a story, handle something going wrong, or have a proper conversation with a real Spanish person.
                 </p>
+                <p>
+                  Using a context-first, confidence-led method built specifically around life in Spain, you'll work through 84 structured days covering every tense, every real-world situation and the cultural knowledge that separates tourists from people who actually belong.
+                </p>
+                <p>By Day 84 you won't just have learned Spanish. You'll speak it.</p>
                 <ul className="course-highlights-list" style={{ listStyle: 'none', padding: 0, marginTop: '0.75rem' }}>
-                  <li>Real-life travel situations</li>
-                  <li>Progressive skill-building</li>
-                  <li>A deeper understanding of how Spanish works</li>
-                  <li>Live weekly practice call</li>
-                  <li>Speak comfortably, not just survive</li>
+                  <li>A1 to B1/B2 in 90 days</li>
+                  <li>30 minutes a day</li>
+                  <li>Deeper fluency foundations</li>
+                  <li>Real Spain, not textbook Spanish</li>
+                  <li>Videos, audios and full dialogues throughout</li>
+                  <li>Speak comfortably not just survive</li>
                 </ul>
               </div>
             </div>

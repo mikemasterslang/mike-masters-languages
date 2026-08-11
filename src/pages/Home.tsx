@@ -258,10 +258,10 @@ export default function Home() {
               <div className="service-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
               </div>
-              <h3>Beginners Spanish Travel Pack</h3>
-              <p>More structure, more depth, and more speaking practice before your trip — with weekly live calls included.</p>
+              <h3>Speak Spanish Sin Miedo</h3>
+              <p>Go from complete beginner to genuine B1/B2 — in 90 days, 30 minutes a day, without ever feeling like you're back in a classroom.</p>
               <ul className="service-features">
-                {['35–50 min daily content', 'Live weekly practice call', 'Progressive skill-building', 'Real travel scenarios'].map(f => (
+                {['A1 to B1/B2 in 90 days', '30 minutes a day', 'Deeper fluency foundations', 'Speak comfortably not just survive'].map(f => (
                   <li key={f}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{f}</li>
                 ))}
               </ul>
