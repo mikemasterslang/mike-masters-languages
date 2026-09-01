@@ -220,7 +220,6 @@ export default function GetStarted() {
                   Arrive in Spain feeling prepared, capable, and ready to belong instead of anxious and silent.
                 </p>
               </div>
-              <a href="https://buy.stripe.com/4gM28q6mE5qZ5u782j9IQ0b" className="btn btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>Buy Now</a>
             </div>
             <div className="course-feature-visual fade-in-right">
               <div className="course-visual-card">
@@ -282,7 +281,6 @@ export default function GetStarted() {
                 </p>
                 <p className="course-highlight">By Day 84 you won't just have learned Spanish. You'll speak it.</p>
               </div>
-              <a href="https://buy.stripe.com/aFacN44ew4mVbSveqH9IQ0a" className="btn btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>Buy Now</a>
             </div>
           </div>
         </div>
