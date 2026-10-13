@@ -7,7 +7,7 @@ export default function BlogDaysMonths() {
   useScrollAnimation();
   usePageMeta(
     'Days, Months and Seasons in Spanish: Complete Guide | Mike Masters Languages',
-    'Learn days of the week, months, seasons and how to say dates in Spanish — including the important rule that days and months do not use capital letters in Spanish.'
+    'Days of the week, months and seasons in Spanish — complete guide. No, days and months are not capitalised in Spanish. Plus how to say dates, use articles, and talk about the seasons.'
   );
 
   return (
@@ -53,8 +53,8 @@ export default function BlogDaysMonths() {
               </table>
             </div>
 
-            <div className="blog-tip">
-              <p><strong>No capitals for days or months:</strong> Unlike English, Spanish does not capitalise days of the week, months of the year or seasons. Write <em>lunes</em>, not <em>Lunes</em>; <em>enero</em>, not <em>Enero</em>. This applies in all contexts.</p>
+            <div className="blog-highlight">
+              <p><strong>Do you capitalise days of the week in Spanish?</strong> No. In Spanish, days of the week, months of the year and seasons are all written in <strong>lower case</strong>. Write <em>lunes</em>, not <em>Lunes</em>; <em>enero</em>, not <em>Enero</em>; <em>primavera</em>, not <em>Primavera</em>. This applies everywhere — even at the start of a sentence if the day isn't the first word.</p>
             </div>
 
             <h2>Using Days in Sentences</h2>

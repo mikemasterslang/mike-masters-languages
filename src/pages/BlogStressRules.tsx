@@ -6,8 +6,8 @@ import './BlogPost.css';
 export default function BlogStressRules() {
   useScrollAnimation();
   usePageMeta(
-    'Spanish Stress Rules: Which Syllable Gets the Emphasis | Mike Masters Languages',
-    'Spanish word stress follows clear, learnable rules. Understand the default stress patterns, how accent marks override them, and why stress can change the meaning of a word entirely.'
+    'Spanish Stress Rules: The Two Basic Rules Every Learner Needs | Mike Masters Languages',
+    'How many basic rules for stress are there in Spanish? Two. This guide explains both rules clearly, shows how accent marks signal every exception, and includes plenty of worked examples.'
   );
 
   return (
@@ -32,6 +32,10 @@ export default function BlogStressRules() {
       <section className="section" style={{ paddingTop: '1rem' }}>
         <div className="container">
           <div className="blog-content">
+
+            <div className="blog-highlight">
+              <p><strong>How many basic rules for stress are there in Spanish?</strong> There are <strong>two</strong>. Rule 1 covers words ending in a vowel, N or S. Rule 2 covers words ending in any other consonant. A written accent mark signals every exception to both rules.</p>
+            </div>
 
             <p>English word stress is notoriously irregular. Consider "photograph" (PHO-to-graph), "photography" (pho-TOG-ra-phy) and "photographic" (pho-to-GRAPH-ic) — three related words, three different stress patterns, with no rule to explain why. Spanish is far more logical. There are two default rules, and a written accent mark clearly signals every exception. Learn the system once and it works everywhere.</p>
 

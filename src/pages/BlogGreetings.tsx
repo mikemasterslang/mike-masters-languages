@@ -6,8 +6,8 @@ import './BlogPost.css';
 export default function BlogGreetings() {
   useScrollAnimation();
   usePageMeta(
-    'Spanish Greetings and Register: Formal vs Informal, Regional Differences | Mike Masters Languages',
-    'Spanish greetings go far beyond "hola". This guide covers formal and informal greetings, regional variations, farewells, and how to get the register right in different situations.'
+    'Spanish Greetings: How They Differ From the US, Formal vs Informal | Mike Masters Languages',
+    'How are greetings in the Spanish-speaking world different from those in the United States? Physical contact, formality levels, time-of-day greetings and more — all explained clearly.'
   );
 
   return (
@@ -22,9 +22,9 @@ export default function BlogGreetings() {
             <span className="blog-hero-tag">Vocabulary</span>
             <span className="blog-hero-date">May 2026</span>
           </div>
-          <h1>Spanish Greetings and Register: Formal vs Informal</h1>
+          <h1>Spanish Greetings: How They Differ From the US, and How to Get Them Right</h1>
           <p className="blog-hero-intro">
-            How you greet someone in Spanish says a lot about your awareness of the language. Here's how to get the register right — and sound natural doing it.
+            Greetings in the Spanish-speaking world work differently to the United States — in how people make physical contact, how formality is expressed, and how much more varied the options are. Here's exactly what changes and why.
           </p>
         </div>
       </section>
@@ -34,6 +34,57 @@ export default function BlogGreetings() {
           <div className="blog-content">
 
             <p>Spanish greetings are warm, varied, and — importantly — context-dependent. The Spanish-speaking world is huge, and greetings differ significantly between Spain and Latin America, between formal and informal settings, and between different times of day. Getting the right greeting in the right context is one of the clearest signals of cultural awareness.</p>
+
+            <h2>How Greetings in the Spanish-Speaking World Differ From the United States</h2>
+            <p>If you're used to greetings in the US, several things about Spanish-speaking cultures will feel noticeably different:</p>
+
+            <h3>Physical Contact Is Normal — Even Expected</h3>
+            <p>In the United States, a handshake is the standard greeting between people who don't know each other well, and physical contact beyond that is uncommon in everyday interactions. In the Spanish-speaking world, this is quite different:</p>
+            <ul>
+              <li><strong>In Spain:</strong> two kisses on the cheek (one on each side, right cheek first) are the standard greeting between women, and between men and women who know each other. Men typically shake hands with other men they don't know well, but hug friends.</li>
+              <li><strong>In Latin America:</strong> one kiss on the cheek is more common in many countries (Mexico, Argentina, Colombia, etc.), though this varies by region. As in Spain, this applies between women and between men and women.</li>
+              <li><strong>In formal settings:</strong> a firm handshake is the norm regardless of country — the kisses are reserved for social, informal situations.</li>
+            </ul>
+            <p>This physical element of greeting can feel unfamiliar to Americans at first, but refusing or avoiding it can come across as cold or unfriendly. Understanding that it is cultural — not personal — makes it easy to embrace.</p>
+
+            <h3>Verbal Greetings Are More Time-Specific</h3>
+            <p>In the US, "hi" or "hello" works at any time of day. Spanish speakers are more likely to use time-specific greetings: <em>buenos días</em> in the morning, <em>buenas tardes</em> in the afternoon, <em>buenas noches</em> in the evening. Using the correct one is a small but appreciated sign of cultural awareness.</p>
+
+            <h3>Formality Levels Are Built Into the Language</h3>
+            <p>Spanish has two ways to say "you" — <em>tú</em> (informal) and <em>usted</em> (formal) — and the choice of greeting changes accordingly. Americans are used to addressing almost everyone the same way. In Spanish, using the wrong register (too casual with a stranger, too formal with a friend) is noticed immediately. This formality distinction is baked into every interaction.</p>
+
+            <h3>Asking "How Are You?" Is More Genuine</h3>
+            <p>In American English, "How are you?" is often a greeting in itself, not a real question. In Spanish-speaking cultures, <em>¿Cómo estás?</em> is generally a more genuine enquiry, and a proper response is expected — not just "fine" as a reflex. Conversations often start more warmly and personally.</p>
+
+            <div className="blog-tip">
+              <p><strong>Summary of key differences:</strong> Spanish-speaking greetings involve more physical contact, use time-of-day specific phrases, have built-in formality levels (tú/usted), and treat "how are you?" as a real question rather than a filler.</p>
+            </div>
+
+            <h2>How Physical Greetings Vary Between Formal and Informal Settings</h2>
+            <div className="blog-table-wrapper">
+              <table className="blog-table">
+                <thead><tr><th>Setting</th><th>Between women</th><th>Between men</th><th>Between a man and a woman</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Informal (friends, family)</strong></td><td>One or two kisses on the cheek</td><td>Handshake or hug</td><td>One or two kisses on the cheek</td></tr>
+                  <tr><td><strong>Formal (business, strangers)</strong></td><td>Handshake (or light kiss depending on country)</td><td>Firm handshake</td><td>Handshake</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>In Spain specifically, women always kiss on both cheeks in informal settings — this is so standard that not doing it can feel rude. In Latin America there is more regional variation, but a single kiss or cheek-touch is common in most countries in informal contexts.</p>
+
+            <h2>How Verbal Greetings Vary Between Formal and Informal Settings</h2>
+            <p>The words you choose signal whether you're treating the situation as formal or informal:</p>
+            <div className="blog-table-wrapper">
+              <table className="blog-table">
+                <thead><tr><th>Informal</th><th>Formal</th></tr></thead>
+                <tbody>
+                  <tr><td>Hola, ¿qué tal?</td><td>Buenos días, ¿cómo está usted?</td></tr>
+                  <tr><td>¿Cómo estás?</td><td>¿Cómo está usted?</td></tr>
+                  <tr><td>¿Qué hay? / ¿Qué pasa?</td><td>Mucho gusto (pleased to meet you)</td></tr>
+                  <tr><td>Tío / Tía (Spain, very casual)</td><td>Encantado/a (delighted to meet you)</td></tr>
+                </tbody>
+              </table>
+            </div>
 
             <h2>Basic Greetings</h2>
             <div className="blog-table-wrapper">
