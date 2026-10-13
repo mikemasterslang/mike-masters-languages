@@ -615,4 +615,54 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/eres-vs-estas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/again-in-spanish</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/would-could-should-in-spanish</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/used-to-in-spanish-solia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/is-cafe-masculine-or-feminine-in-spanish</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/coger-in-spain-vs-latin-america</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/spanish-preterite-tense-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/spanish-subjunctive-triggers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/time-expressions-preterite-or-imperfect</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mikemasterslanguages.com/blogs/son-vs-estan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

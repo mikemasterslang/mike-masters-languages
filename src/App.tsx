@@ -126,6 +126,16 @@ import BlogGCSEReading from './pages/BlogGCSEReading';
 import BlogGCSEVocab from './pages/BlogGCSEVocab';
 import BlogGCSEGrade9 from './pages/BlogGCSEGrade9';
 import BlogALevelSpanish from './pages/BlogALevelSpanish';
+import BlogEresVsEstas from './pages/BlogEresVsEstas';
+import BlogOtraVez from './pages/BlogOtraVez';
+import BlogWouldCouldShould from './pages/BlogWouldCouldShould';
+import BlogSolia from './pages/BlogSolia';
+import BlogCafeGender from './pages/BlogCafeGender';
+import BlogCoger from './pages/BlogCoger';
+import BlogPreteriteGuide from './pages/BlogPreteriteGuide';
+import BlogSubjunctiveTriggers from './pages/BlogSubjunctiveTriggers';
+import BlogTimeExpressionsPreterite from './pages/BlogTimeExpressionsPreterite';
+import BlogSonVsEstan from './pages/BlogSonVsEstan';
 
 export default function App() {
   return (
@@ -256,6 +266,16 @@ export default function App() {
           <Route path="/blogs/gcse-spanish-vocabulary" element={<BlogGCSEVocab />} />
           <Route path="/blogs/how-to-get-grade-9-gcse-spanish" element={<BlogGCSEGrade9 />} />
           <Route path="/blogs/a-level-spanish-tips" element={<BlogALevelSpanish />} />
+          <Route path="/blogs/eres-vs-estas" element={<BlogEresVsEstas />} />
+          <Route path="/blogs/again-in-spanish" element={<BlogOtraVez />} />
+          <Route path="/blogs/would-could-should-in-spanish" element={<BlogWouldCouldShould />} />
+          <Route path="/blogs/used-to-in-spanish-solia" element={<BlogSolia />} />
+          <Route path="/blogs/is-cafe-masculine-or-feminine-in-spanish" element={<BlogCafeGender />} />
+          <Route path="/blogs/coger-in-spain-vs-latin-america" element={<BlogCoger />} />
+          <Route path="/blogs/spanish-preterite-tense-guide" element={<BlogPreteriteGuide />} />
+          <Route path="/blogs/spanish-subjunctive-triggers" element={<BlogSubjunctiveTriggers />} />
+          <Route path="/blogs/time-expressions-preterite-or-imperfect" element={<BlogTimeExpressionsPreterite />} />
+          <Route path="/blogs/son-vs-estan" element={<BlogSonVsEstan />} />
         </Routes>
         <Footer />
         <ScrollToTop />
