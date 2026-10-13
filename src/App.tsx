@@ -114,6 +114,18 @@ import BlogIntermediateMistakes from './pages/BlogIntermediateMistakes';
 import BlogSelfStudy from './pages/BlogSelfStudy';
 import BlogBalancePractice from './pages/BlogBalancePractice';
 import BlogGCSETips from './pages/BlogGCSETips';
+import BlogHowLong from './pages/BlogHowLong';
+import BlogIsSpanishHard from './pages/BlogIsSpanishHard';
+import BlogTutorVsApp from './pages/BlogTutorVsApp';
+import BlogTutorCost from './pages/BlogTutorCost';
+import BlogIrregularVerbsList from './pages/BlogIrregularVerbsList';
+import BlogCastilianSpanish from './pages/BlogCastilianSpanish';
+import BlogGCSESpeaking from './pages/BlogGCSESpeaking';
+import BlogGCSEWriting from './pages/BlogGCSEWriting';
+import BlogGCSEReading from './pages/BlogGCSEReading';
+import BlogGCSEVocab from './pages/BlogGCSEVocab';
+import BlogGCSEGrade9 from './pages/BlogGCSEGrade9';
+import BlogALevelSpanish from './pages/BlogALevelSpanish';
 
 export default function App() {
   return (
@@ -232,6 +244,18 @@ export default function App() {
           <Route path="/blogs/self-study-spanish" element={<BlogSelfStudy />} />
           <Route path="/blogs/balance-four-skills" element={<BlogBalancePractice />} />
           <Route path="/blogs/gcse-spanish-tips" element={<BlogGCSETips />} />
+          <Route path="/blogs/how-long-to-learn-spanish" element={<BlogHowLong />} />
+          <Route path="/blogs/is-spanish-hard-to-learn" element={<BlogIsSpanishHard />} />
+          <Route path="/blogs/spanish-tutor-vs-app" element={<BlogTutorVsApp />} />
+          <Route path="/blogs/how-much-does-a-spanish-tutor-cost" element={<BlogTutorCost />} />
+          <Route path="/blogs/spanish-irregular-verbs-list" element={<BlogIrregularVerbsList />} />
+          <Route path="/blogs/castilian-spanish" element={<BlogCastilianSpanish />} />
+          <Route path="/blogs/gcse-spanish-speaking-exam" element={<BlogGCSESpeaking />} />
+          <Route path="/blogs/gcse-spanish-writing-exam" element={<BlogGCSEWriting />} />
+          <Route path="/blogs/gcse-spanish-reading-exam" element={<BlogGCSEReading />} />
+          <Route path="/blogs/gcse-spanish-vocabulary" element={<BlogGCSEVocab />} />
+          <Route path="/blogs/how-to-get-grade-9-gcse-spanish" element={<BlogGCSEGrade9 />} />
+          <Route path="/blogs/a-level-spanish-tips" element={<BlogALevelSpanish />} />
         </Routes>
         <Footer />
         <ScrollToTop />

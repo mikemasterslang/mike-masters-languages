@@ -6,8 +6,8 @@ import './BlogPost.css';
 export default function BlogLinkingWords() {
   useScrollAnimation();
   usePageMeta(
-    'How Words Link Together in Natural Spanish Speech | Mike Masters Languages',
-    'Natural spoken Spanish sounds very different from written Spanish. Learn how vowels and consonants link across word boundaries, why words blur together, and how to train your ear and mouth to do the same.'
+    'Connected Speech in Spanish: How Words Link Together | Mike Masters Languages',
+    'Connected speech in Spanish — how words link together in natural speech. Vowel linking, consonant linking, elision and why native speakers sound so fast.'
   );
 
   return (
@@ -22,7 +22,7 @@ export default function BlogLinkingWords() {
             <span className="blog-hero-tag">Pronunciation</span>
             <span className="blog-hero-date">May 2026</span>
           </div>
-          <h1>How Words Link Together in Natural Spanish Speech</h1>
+          <h1>Connected Speech in Spanish: How Words Link Together</h1>
           <p className="blog-hero-intro">
             Native Spanish speakers do not pause between words. Sounds flow across word boundaries in predictable ways — and once you understand the patterns, fast spoken Spanish becomes far easier to follow.
           </p>
