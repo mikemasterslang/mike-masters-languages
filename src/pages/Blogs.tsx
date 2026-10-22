@@ -920,17 +920,27 @@ const categories = [
 export default function Blogs() {
   useScrollAnimation();
   usePageMeta(
-    'Blog | Mike Masters Languages',
+    'Spanish Learning Blog | Grammar, Vocabulary, Speaking & Exam Tips | Mike Masters',
     'Language learning tips, grammar guides and practical advice for beginner Spanish learners. Written by professional language tutor Mike Masters.'
   );
 
   const [openCategories, setOpenCategories] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleCategory = (id: string) => {
     setOpenCategories(prev =>
       prev.includes(id) ? prev.filter(c => c !== id) : [...prev, id]
     );
   };
+
+  const query = searchQuery.trim().toLowerCase();
+  const searchResults = query
+    ? posts.filter(p =>
+        p.title.toLowerCase().includes(query) ||
+        p.excerpt.toLowerCase().includes(query) ||
+        p.tag.toLowerCase().includes(query)
+      )
+    : [];
 
   return (
     <main className="blogs-page">
@@ -944,57 +954,47 @@ export default function Blogs() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingBottom: '1rem' }}>
+      <section className="section blogs-search-section">
         <div className="container">
-          <nav className="blogs-toc fade-in">
-            <p className="blogs-toc-label">Contents</p>
-            {categories.map((cat) => {
-              const catPosts = posts.filter(p => p.tag === cat.tag);
-              const isOpen = openCategories.includes(cat.id);
-              return (
-                <div key={cat.id} className="blogs-toc-category">
-                  <button
-                    className="blogs-toc-heading"
-                    onClick={() => toggleCategory(cat.id)}
-                    aria-expanded={isOpen}
-                  >
-                    <span>{cat.label} <span className="blogs-toc-cat-count">({catPosts.length})</span></span>
-                    <svg
-                      className={`blogs-toc-chevron${isOpen ? ' open' : ''}`}
-                      width="16" height="16" viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" strokeWidth="2.5"
-                      strokeLinecap="round" strokeLinejoin="round"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  {isOpen && (
-                    <ul className="blogs-toc-list">
-                      {catPosts.map(post => (
-                        <li key={post.slug}>
-                          <Link to={post.slug} className="blogs-toc-post-link">{post.title}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              );
-            })}
-          </nav>
+          <div className="blogs-search-wrapper fade-in">
+            <svg className="blogs-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              type="text"
+              className="blogs-search-input"
+              placeholder="Search posts — e.g. subjunctive, pronunciation, vocab..."
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              aria-label="Search blog posts"
+            />
+            {searchQuery && (
+              <button
+                className="blogs-search-clear"
+                onClick={() => setSearchQuery('')}
+                aria-label="Clear search"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            )}
+          </div>
         </div>
       </section>
 
-      {categories.map((cat) => {
-        const catPosts = posts.filter(p => p.tag === cat.tag);
-        return (
-          <section key={cat.id} id={cat.id} className="section blogs-category-section">
-            <div className="container">
-              <div className="blogs-category-header">
-                <h2 className="blogs-category-title">{cat.label}</h2>
-                <span className="blogs-category-count">{catPosts.length} {catPosts.length === 1 ? 'post' : 'posts'}</span>
-              </div>
+      {query ? (
+        <section className="section blogs-category-section">
+          <div className="container">
+            <div className="blogs-category-header">
+              <h2 className="blogs-category-title">Search results</h2>
+              <span className="blogs-category-count">{searchResults.length} {searchResults.length === 1 ? 'post' : 'posts'}</span>
+            </div>
+            {searchResults.length > 0 ? (
               <div className="blogs-grid">
-                {catPosts.map((post) => (
+                {searchResults.map((post) => (
                   <Link to={post.slug} key={post.slug} className="blog-card card" style={{ textDecoration: 'none' }}>
                     <div className="blog-card-body">
                       <span className="blog-tag">{post.tag}</span>
@@ -1008,10 +1008,83 @@ export default function Blogs() {
                   </Link>
                 ))}
               </div>
+            ) : (
+              <p className="blogs-no-results">No posts matched "{searchQuery}". Try a different keyword.</p>
+            )}
+          </div>
+        </section>
+      ) : (
+        <>
+          <section className="section" style={{ paddingBottom: '1rem' }}>
+            <div className="container">
+              <nav className="blogs-toc fade-in">
+                <p className="blogs-toc-label">Contents</p>
+                {categories.map((cat) => {
+                  const catPosts = posts.filter(p => p.tag === cat.tag);
+                  const isOpen = openCategories.includes(cat.id);
+                  return (
+                    <div key={cat.id} className="blogs-toc-category">
+                      <button
+                        className="blogs-toc-heading"
+                        onClick={() => toggleCategory(cat.id)}
+                        aria-expanded={isOpen}
+                      >
+                        <span>{cat.label} <span className="blogs-toc-cat-count">({catPosts.length})</span></span>
+                        <svg
+                          className={`blogs-toc-chevron${isOpen ? ' open' : ''}`}
+                          width="16" height="16" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" strokeWidth="2.5"
+                          strokeLinecap="round" strokeLinejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </button>
+                      {isOpen && (
+                        <ul className="blogs-toc-list">
+                          {catPosts.map(post => (
+                            <li key={post.slug}>
+                              <Link to={post.slug} className="blogs-toc-post-link">{post.title}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  );
+                })}
+              </nav>
             </div>
           </section>
-        );
-      })}
+
+          {categories.map((cat) => {
+            const catPosts = posts.filter(p => p.tag === cat.tag);
+            return (
+              <section key={cat.id} id={cat.id} className="section blogs-category-section">
+                <div className="container">
+                  <div className="blogs-category-header">
+                    <h2 className="blogs-category-title">{cat.label}</h2>
+                    <span className="blogs-category-count">{catPosts.length} {catPosts.length === 1 ? 'post' : 'posts'}</span>
+                  </div>
+                  <div className="blogs-grid">
+                    {catPosts.map((post) => (
+                      <Link to={post.slug} key={post.slug} className="blog-card card" style={{ textDecoration: 'none' }}>
+                        <div className="blog-card-body">
+                          <span className="blog-tag">{post.tag}</span>
+                          <h2 className="blog-title">{post.title}</h2>
+                          <p className="blog-excerpt">{post.excerpt}</p>
+                        </div>
+                        <div className="blog-card-footer">
+                          <span className="blog-date">{post.date}</span>
+                          <span className="blog-read-more">Read more →</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            );
+          })}
+        </>
+      )}
     </main>
   );
 }

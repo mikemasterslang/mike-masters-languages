@@ -1,3 +1,69 @@
+.blogs-search-section {
+  padding-top: 2.5rem;
+  padding-bottom: 0;
+}
+
+.blogs-search-wrapper {
+  position: relative;
+  max-width: 580px;
+  display: flex;
+  align-items: center;
+}
+
+.blogs-search-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.blogs-search-input {
+  width: 100%;
+  padding: 0.85rem 3rem 0.85rem 2.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 0.6rem;
+  background: var(--card-bg, #fff);
+  color: var(--text);
+  font-size: 0.97rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.blogs-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.blogs-search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 99, 102, 241), 0.12);
+}
+
+.blogs-search-clear {
+  position: absolute;
+  right: 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  transition: color 0.15s ease;
+}
+
+.blogs-search-clear:hover {
+  color: var(--text);
+}
+
+.blogs-no-results {
+  color: var(--text-muted);
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
 .blogs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
