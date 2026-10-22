@@ -13,7 +13,7 @@
 .blogs-search-icon {
   position: absolute;
   left: 1rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.65);
   pointer-events: none;
   flex-shrink: 0;
 }
@@ -21,10 +21,10 @@
 .blogs-search-input {
   width: 100%;
   padding: 0.85rem 3rem 0.85rem 2.75rem;
-  border: 1.5px solid var(--border);
+  border: 1.5px solid transparent;
   border-radius: 0.6rem;
-  background: var(--card-bg, #fff);
-  color: var(--text);
+  background: var(--primary);
+  color: #fff;
   font-size: 0.97rem;
   font-family: inherit;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -32,12 +32,12 @@
 }
 
 .blogs-search-input::placeholder {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .blogs-search-input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 99, 102, 241), 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
 }
 
 .blogs-search-clear {
@@ -46,7 +46,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.65);
   display: flex;
   align-items: center;
   padding: 0.2rem;
@@ -55,7 +55,7 @@
 }
 
 .blogs-search-clear:hover {
-  color: var(--text);
+  color: #fff;
 }
 
 .blogs-no-results {
