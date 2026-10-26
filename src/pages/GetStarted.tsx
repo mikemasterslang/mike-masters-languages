@@ -15,7 +15,7 @@ type Financial = 'yes' | 'no' | '';
 export default function GetStarted() {
   useScrollAnimation();
   usePageMeta(
-    'Get Started | Mike Masters Languages',
+    'Book an Online Spanish Lesson | Mike Masters Languages',
     'Apply for Spanish, French or Russian lessons with Mike Masters Languages. Tell us about your goals and we\'ll find the right programme for you.'
   );
 

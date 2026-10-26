@@ -1,5 +1,7 @@
 {
   "routes": [
+    { "src": "/spanish", "headers": { "Location": "/get-started" }, "status": 301 },
+    { "src": "/courses", "headers": { "Location": "/get-started" }, "status": 301 },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]

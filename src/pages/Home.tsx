@@ -47,7 +47,7 @@ const reviews = [
 export default function Home() {
   useScrollAnimation();
   usePageMeta(
-    'Online Spanish Tutor | French & Russian Lessons | Mike Masters Languages',
+    'Online Spanish Tutor UK | GCSE, A-Level & Adult Lessons | Mike Masters',
     'Mike Masters is an online language tutor specialising in Spanish, French and Russian. 1-to-1 online lessons, GCSE & A-Level language exam prep, and confidence-first Spanish courses for adults. 100% target grade record.'
   );
 
