@@ -36,7 +36,7 @@ export default function GetStarted() {
     document.body.appendChild(script);
     const handleCalendlyEvent = (e: MessageEvent) => {
       if (e.data?.event === 'calendly.event_scheduled') {
-        if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+        if (typeof window.fbq === 'function') window.fbq('track', 'CompleteRegistration');
         setSubmitted(true);
       }
     };
