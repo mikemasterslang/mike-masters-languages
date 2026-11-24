@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
+import { captureSSRMeta } from '../ssr-meta';
 
 export function usePageMeta(title: string, description: string) {
+  if (typeof window === 'undefined') {
+    captureSSRMeta(title, description);
+  }
+
   useEffect(() => {
     document.title = title;
     const meta = document.querySelector('meta[name="description"]');

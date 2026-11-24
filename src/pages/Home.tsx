@@ -76,7 +76,7 @@ export default function Home() {
         <div className="container hero-content">
           <div className="hero-badge fade-in">Mike Masters Languages</div>
           <h1 className="hero-title fade-in">
-            Explore the World<br />
+            Find the World<br />
             Through <span className="gradient-text">Language</span>
           </h1>
           <p className="hero-subtitle fade-in">
