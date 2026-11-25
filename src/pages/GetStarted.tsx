@@ -239,6 +239,16 @@ export default function GetStarted() {
         </div>
       </section>
 
+      {/* Support Section */}
+      <section className="section">
+        <div className="container">
+          <div className="tuition-intro fade-in" style={{ maxWidth: '720px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 className="section-title">Support while you <span className="gradient-text">learn</span></h2>
+            <p>Whichever programme you choose, you get full access to my online Spanish community. It's where I post tips and challenges to keep you practising, and you can ask me questions and practise with me whenever you need to. I also check in with you privately twice a week to see how you're getting on, so you're never doing this alone.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Speak Spanish Sin Miedo */}
       <section className="section course-feature alt-bg">
         <div className="container">
