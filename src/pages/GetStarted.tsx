@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -31,6 +31,9 @@ export default function GetStarted() {
   const [goals, setGoals] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
+  const answersRef = useRef({ age, level, financial, goals });
+  useEffect(() => { answersRef.current = { age, level, financial, goals }; }, [age, level, financial, goals]);
+
   const totalSteps = 5;
 
   useEffect(() => {
@@ -42,16 +45,17 @@ export default function GetStarted() {
     const handleCalendlyEvent = (e: MessageEvent) => {
       if (e.data?.event === 'calendly.event_scheduled') {
         if (typeof window.fbq === 'function') window.fbq('track', 'CompleteRegistration');
+        const { age: a, level: l, financial: f, goals: g } = answersRef.current;
         emailjs.send(
           EMAILJS_SERVICE_ID,
           EMAILJS_QUESTIONNAIRE_TEMPLATE_ID,
           {
             name: e.data?.payload?.invitee?.name ?? 'Unknown',
             email: e.data?.payload?.invitee?.email ?? 'Unknown',
-            age,
-            level: level === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
-            financial: financial === 'yes' ? 'Yes, ready to invest' : 'Not quite yet',
-            goals,
+            age: a,
+            level: l === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
+            financial: f === 'yes' ? 'Yes, ready to invest' : 'Not quite yet',
+            goals: g,
           },
           EMAILJS_PUBLIC_KEY,
         );
@@ -62,7 +66,7 @@ export default function GetStarted() {
     return () => {
       window.removeEventListener('message', handleCalendlyEvent);
     };
-  }, [step, age, level, financial, goals]);
+  }, [step]);
 
   const handleNext = () => setStep(s => s + 1);
   const handleBack = () => setStep(s => s - 1);
