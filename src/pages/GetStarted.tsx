@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { usePageMeta } from '../hooks/usePageMeta';
 import FlagIcon from '../components/FlagIcon';
@@ -9,9 +8,17 @@ import './Spanish.css';
 import './Courses.css';
 import './BookOnline.css';
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const EMAILJS_QUESTIONNAIRE_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_QUESTIONNAIRE_TEMPLATE_ID;
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidget: (options: {
+        url: string;
+        parentElement: HTMLElement;
+        prefill?: { customAnswers?: Record<string, string> };
+      }) => void;
+    };
+  }
+}
 
 type AgeRange = '16-17' | '18-24' | '25-34' | '35-44' | '45+' | '';
 type Level = 'beginner' | 'some-experience' | '';
@@ -30,45 +37,44 @@ export default function GetStarted() {
   const [financial, setFinancial] = useState<Financial>('');
   const [goals, setGoals] = useState('');
   const [submitted, setSubmitted] = useState(false);
-
-  const answersRef = useRef({ age, level, financial, goals });
-  useEffect(() => { answersRef.current = { age, level, financial, goals }; }, [age, level, financial, goals]);
+  const [calendlyUrl, setCalendlyUrl] = useState('');
 
   const totalSteps = 5;
 
   useEffect(() => {
     if (step !== 5) return;
+
+    const prefillBlock = [
+      `Age range: ${age}`,
+      `Current level: ${level === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience'}`,
+      `Ready to invest: ${financial === 'yes' ? 'Yes, ready to invest' : 'Not quite yet'}`,
+      `Goals / background: ${goals.trim() || 'not given'}`,
+    ].join('\n');
+
+    const base = 'https://calendly.com/michael-s-andrews/course-enquiries?hide_gdpr_banner=1&hide_event_type_details=1';
+    setCalendlyUrl(`${base}&a3=${encodeURIComponent(prefillBlock)}`);
+
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     document.body.appendChild(script);
+
     const handleCalendlyEvent = (e: MessageEvent) => {
       if (e.data?.event === 'calendly.event_scheduled') {
         if (typeof window.fbq === 'function') window.fbq('track', 'CompleteRegistration');
-        const { age: a, level: l, financial: f, goals: g } = answersRef.current;
-        emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_QUESTIONNAIRE_TEMPLATE_ID,
-          {
-            name: e.data?.payload?.invitee?.name ?? 'Unknown',
-            email: e.data?.payload?.invitee?.email ?? 'Unknown',
-            age: a,
-            level: l === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
-            financial: f === 'yes' ? 'Yes, ready to invest' : 'Not quite yet',
-            goals: g,
-          },
-          EMAILJS_PUBLIC_KEY,
-        );
         setSubmitted(true);
       }
     };
     window.addEventListener('message', handleCalendlyEvent);
+
     return () => {
       window.removeEventListener('message', handleCalendlyEvent);
     };
-  }, [step]);
+  }, [step, age, level, financial, goals]);
 
-  const handleNext = () => setStep(s => s + 1);
+  const handleNext = () => {
+    setStep(s => s + 1);
+  };
   const handleBack = () => setStep(s => s - 1);
 
   return (
@@ -201,11 +207,13 @@ export default function GetStarted() {
                 <div className="gs-step">
                   <h2>Book a chat with me</h2>
                   <p className="gs-subtitle">Pick a time that suits you and we'll talk through your options together.</p>
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/michael-s-andrews/course-enquiries?hide_gdpr_banner=1&hide_event_type_details=1"
-                    style={{ minWidth: '320px', height: '700px', width: '100%', marginTop: '0.5rem' }}
-                  />
+                  {calendlyUrl && (
+                    <div
+                      className="calendly-inline-widget"
+                      data-url={calendlyUrl}
+                      style={{ minWidth: '320px', height: '700px', width: '100%', marginTop: '0.5rem' }}
+                    />
+                  )}
                   <div className="gs-nav" style={{ marginTop: '1rem' }}>
                     <button className="btn btn-secondary" onClick={handleBack}>Back</button>
                   </div>
