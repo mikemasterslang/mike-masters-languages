@@ -46,6 +46,8 @@ export default function GetStarted() {
           EMAILJS_SERVICE_ID,
           EMAILJS_QUESTIONNAIRE_TEMPLATE_ID,
           {
+            name: e.data?.payload?.invitee?.name ?? 'Unknown',
+            email: e.data?.payload?.invitee?.email ?? 'Unknown',
             age,
             level: level === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
             financial: financial === 'yes' ? 'Yes, ready to invest' : 'Not quite yet',
