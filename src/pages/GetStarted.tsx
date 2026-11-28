@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { usePageMeta } from '../hooks/usePageMeta';
 import FlagIcon from '../components/FlagIcon';
@@ -7,6 +8,10 @@ import './GetStarted.css';
 import './Spanish.css';
 import './Courses.css';
 import './BookOnline.css';
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_QUESTIONNAIRE_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_QUESTIONNAIRE_TEMPLATE_ID;
 
 type AgeRange = '16-17' | '18-24' | '25-34' | '35-44' | '45+' | '';
 type Level = 'beginner' | 'some-experience' | '';
@@ -37,6 +42,17 @@ export default function GetStarted() {
     const handleCalendlyEvent = (e: MessageEvent) => {
       if (e.data?.event === 'calendly.event_scheduled') {
         if (typeof window.fbq === 'function') window.fbq('track', 'CompleteRegistration');
+        emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_QUESTIONNAIRE_TEMPLATE_ID,
+          {
+            age,
+            level: level === 'beginner' ? 'Complete Beginner' : 'Some / Limited Experience',
+            financial: financial === 'yes' ? 'Yes, ready to invest' : 'Not quite yet',
+            goals,
+          },
+          EMAILJS_PUBLIC_KEY,
+        );
         setSubmitted(true);
       }
     };
@@ -44,7 +60,7 @@ export default function GetStarted() {
     return () => {
       window.removeEventListener('message', handleCalendlyEvent);
     };
-  }, [step]);
+  }, [step, age, level, financial, goals]);
 
   const handleNext = () => setStep(s => s + 1);
   const handleBack = () => setStep(s => s - 1);
